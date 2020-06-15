@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage Title="Movies and Series" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:Week4.MenuItems"
+                  mc:Ignorable="d"
+             x:Class="Week4.Views.MasterPage">
+    <MasterDetailPage.Master>
+        <ContentPage Title="Menu">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="200"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Grid>
+                    <Image Source="Images/bg.jpg" Aspect="AspectFill"></Image>
+                    <StackLayout Padding="0, 20, 0, 0" HorizontalOptions="Center" VerticalOptions="Center">
+                        <Label x:Name="AccountName" Text="{Binding AccountName}" TextColor="Red" FontSize="Large"></Label>
+                    </StackLayout>
+                </Grid>
+                <StackLayout Grid.Row="2" Spacing="8">
+                    <ListView x:Name="NavigationDrawerList" ItemSelected="OnMenuItemSelected" RowHeight="48" SeparatorVisibility="None">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <local:CustomViewCell SelectedItemBackgroundColor="#0078FF">
+                                    <ViewCell.View>
+                                        <StackLayout VerticalOptions="FillAndExpand" Orientation="Horizontal" Padding="20,0,0,0" Spacing="12">
+                                            <Image>
+                                                <Image.Source>
+                                                    <FileImageSource File="{Binding Icon}"></FileImageSource>
+                                                </Image.Source>
+                                            </Image>
+                                            <Label FontSize="Default" TextColor="Black" VerticalOptions="Center" Text="{Binding Title}">
+                                            </Label>
+                                        </StackLayout>
+                                    </ViewCell.View>
+                                </local:CustomViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+            </Grid>
+        </ContentPage>
+    </MasterDetailPage.Master>
+
+    <MasterDetailPage.Detail>
+        <NavigationPage>
+
+        </NavigationPage>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>

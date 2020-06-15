@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Week4.Views.FavoritePage"
+             Title="Favorites">
+
+    <StackLayout Margin="8">
+        <Label Text="All movies and series" FontSize="36"></Label>
+        <Label Text="Movies" FontSize="Large"></Label>
+        <ListView x:Name="MovieList" RowHeight="64" VerticalOptions="Start" ItemSelected="MovieList_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Margin="4">
+                            <Label x:Name="MovieTitle" Text="{Binding Title}" FontSize="16" Margin="8,0" ></Label>
+                            <Label x:Name="MovieDescription" Text="{Binding Description}" FontSize="8" Margin="8,0" ></Label>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Label Text="Series" FontSize="Large"></Label>
+        <ListView x:Name="SerieList" RowHeight="64" VerticalOptions="Start" ItemSelected="SerieList_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Margin="4">
+                            <Label x:Name="SerieTitle" Text="{Binding Title}" FontSize="16" Margin="8,0" ></Label>
+                            <Label x:Name="SerieDescription" Text="{Binding Description}" FontSize="8" Margin="8,0" ></Label>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Text="Refresh" Clicked="Button_Clicked"></Button>
+    </StackLayout>
+</ContentPage>

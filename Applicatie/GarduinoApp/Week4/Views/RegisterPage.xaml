@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Week4.Views.RegisterPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="Username" Text="Username"></Label>
+            <Entry x:Name="UsernameInput" Placeholder="Vul uw gebruikersnaam in"></Entry>
+            <Label x:Name="Password" Text="Password"></Label>
+            <Entry x:Name="PasswordInput" IsPassword="True" Placeholder="Vul uw wachtwoord in"></Entry>
+            <Label x:Name="PasswordRepeat" Text="Password"></Label>
+            <Entry x:Name="PasswordRepeatInput" IsPassword="True" Placeholder="Vul uw wachtwoord nogmaals in"></Entry>
+            <Button x:Name="RegisterButton" HorizontalOptions="Center" Clicked="RegisterClicked" Text="Register"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
