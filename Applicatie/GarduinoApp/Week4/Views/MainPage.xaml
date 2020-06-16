@@ -5,18 +5,6 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="Week4.Views.MainPage">
-    <NavigationPage.TitleView>
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition />
-                <ColumnDefinition />
-                <ColumnDefinition />
-            </Grid.ColumnDefinitions>
-            <Button Text="Main" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0,0,40,40" Grid.Column="0" />
-            <Button Text="History" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0,0,40,40" Grid.Column="1" />
-            <Button Text="ADD" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0,0,40,40" Grid.Column="2" />
-        </Grid>
-    </NavigationPage.TitleView>
     <ContentPage.Content>
         <StackLayout Margin="20,35,20,20">
             <Grid>
@@ -24,33 +12,22 @@
                     <RowDefinition Height="45"></RowDefinition>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"></ColumnDefinition>
-                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
                 </Grid.ColumnDefinitions>
-                <Label Text="Devices" FontAttributes="Bold" FontSize="25" TextColor="Black" HorizontalOptions="Start" VerticalOptions="Center" Grid.Row="0" Grid.Column="0"/>
+                <Label Text="[device name here]" FontAttributes="Bold" FontSize="20" TextColor="Black" 
+                       HorizontalOptions="Start" VerticalOptions="Center" 
+                       Grid.Row="0" Grid.ColumnSpan="2"/>
+                <Label Text="OPTION 1" FontAttributes="Bold" FontSize="20" TextColor="Black" 
+                       HorizontalOptions="Start" VerticalOptions="Center" 
+                       Grid.Row="1" Grid.Column="0"/>
+                <Label Text="OPTION 2" FontAttributes="Bold" FontSize="20" TextColor="Black" 
+                       HorizontalOptions="Start" VerticalOptions="Center" 
+                       Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <ListView x:Name="DevicesList">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <Grid Padding="10">
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto" />
-                                    <RowDefinition Height="*" />
-                                </Grid.RowDefinitions>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto" />
-                                    <ColumnDefinition Width="*" />
-                                </Grid.ColumnDefinitions>
-                                <Frame BackgroundColor="LightBlue" Grid.RowSpan="2" WidthRequest="60" HeightRequest="60">
-                                    <Label x:Name="FirstChar"></Label>
-                                </Frame>
-                                <Label Grid.Column="1" Text="{Binding DeviceName}" FontAttributes="Bold" />
-                            </Grid>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+
+            <!-- parameters van aperraat om aan te passen hier -->
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

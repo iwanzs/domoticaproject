@@ -1,6 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using GarduinoApp.Views;
 using Week4.Models;
 using Xamarin.Forms;
 
@@ -11,35 +13,18 @@ namespace Week4.Views
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
-        protected override bool OnBackButtonPressed() => true;
+//        protected override bool OnBackButtonPressed() => true;
 
         DatabaseManager databasemanager;
 
         public MainPage()
         {
             InitializeComponent();
-//            UpdateLists();
-//            NavigationPage.SetHasNavigationBar(this, false);
-            NavigationPage.SetHasBackButton(this, false);
-//            ((NavigationPage)Application.Current.MainPage).BarBackgroundColor = Color.FromHex("#0080FF");
 
-            //            List<Devices> profiles = databasemanager.GetProfiles();
-            //
-            //            DevicesList.ItemsSource = profiles;
+            NavigationPage.SetHasNavigationBar(this, true);
 
-
-            //SetValue(NavigationPage.HasNavigationBarProperty, false);
 
         }
 
-        private void UpdateLists()
-        {
-            // Update of iets
-        }
-
-        private void UpdateClicked(object sender, System.EventArgs e)
-        {
-            UpdateLists();
-        }
     }
 }
