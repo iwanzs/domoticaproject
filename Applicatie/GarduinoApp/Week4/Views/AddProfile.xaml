@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="GarduinoApp.Views.AddProfile">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Create Profile" FontAttributes="Bold" FontSize="25" TextColor="Black"></Label>
+            <Label Text="Name"></Label>
+            <Entry x:Name="Name" Placeholder="Welke naam?"></Entry>
+            <Label Text="Threshold"></Label>
+            <Entry x:Name="Threshold" Placeholder="Welke drempel?"></Entry>
+            <Label Text="IP"></Label>
+            <Entry x:Name="IP" Placeholder="Welk ip?"></Entry>
+            <Label Text="Port"></Label>
+            <Entry x:Name="Port" Placeholder="Welke poort?"></Entry>
+            <Label Text="ArduinoPinNumber"></Label>
+            <Entry x:Name="ArduinoPinNumber" Placeholder="Welke pin?"></Entry>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

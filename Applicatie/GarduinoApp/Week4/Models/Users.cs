@@ -8,7 +8,7 @@ namespace Week4.Models
     class Users
     {
         [PrimaryKey, AutoIncrement, Unique, NotNull]
-        public int UsersID { get; set; }
+        public int UserID { get; set; }
         [Unique, NotNull]
         public string Username { get; set; }
         [NotNull]

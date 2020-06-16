@@ -36,7 +36,7 @@ namespace Week4.Views
             else if (databasemanager.DoesAccountExist(Username.Text, Password.Text) == true)
             {
                 Configuration.Username = Username.Text;
-                Configuration.UserID = databasemanager.GetUser().UsersID;
+                Configuration.UserID = databasemanager.GetUser().UserID;
                 Navigation.PushAsync(new ProfilePage());
             }
         }
