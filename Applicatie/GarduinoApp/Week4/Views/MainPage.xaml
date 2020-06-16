@@ -13,7 +13,7 @@
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
             <Button Text="Main" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0,0,40,40" Grid.Column="0" />
-            <Button Text="History" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0,0,40,40" Grid.Column="1" />
+            <Button Text="History" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0,0,40,40" Grid.Column="1" Clicked="HistoryClicked" />
             <Button Text="ADD" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0,0,40,40" Grid.Column="2" />
         </Grid>
     </NavigationPage.TitleView>
