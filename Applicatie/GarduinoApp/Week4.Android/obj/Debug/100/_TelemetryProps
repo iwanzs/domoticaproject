@@ -23,10 +23,6 @@ AndroidDexTool=d8
 AndroidLinkTool=
 AndroidEnableProfiledAot=
 AndroidInstallAfterBuild=True
-<<<<<<< HEAD
-AndroidSessionId=f7ae2ac7-46a8-49a7-97c7-4e97a792a88c
-=======
-AndroidSessionId=b0417a9c-c63e-41df-bf5c-a91aeae8e1ee
->>>>>>> origin/tomspretpakket
+AndroidSessionId=a34513d5-f1a6-420c-81d5-69a4c1d7564d
 BuildConfiguration=Debug
 TemplateName={c9e5eea5-ca05-42a1-839b-61506e0a37df}

@@ -64,27 +64,15 @@ mono_aot_mode_name:
 	.type	.L.str.7, @object
 .L.str.7:
 	.asciz	"XAMARIN_BUILD_ID"
-<<<<<<< HEAD
 	.size	.L.str.7, 17
 	.section	.rodata..L.str.8,"aMS",@progbits,1
 	.type	.L.str.8, @object
 .L.str.8:
-	.asciz	"c390eb0f-def7-4222-915e-cb700fa640f9"
+	.asciz	"3c728ba5-1c5a-478e-b69c-c4b0ac541e3b"
 	.size	.L.str.8, 37
 	.section	.rodata..L.str.9,"aMS",@progbits,1
 	.type	.L.str.9, @object
 .L.str.9:
-=======
-	.size	.L.env.str.7, 17
-	.section	.rodata.env.str.8,"aMS",@progbits,1
-	.type	.L.env.str.8, @object
-.L.env.str.8:
-	.asciz	"357f3218-b47b-40b3-a9a8-fd57c20ed908"
-	.size	.L.env.str.8, 37
-	.section	.rodata.env.str.9,"aMS",@progbits,1
-	.type	.L.env.str.9, @object
-.L.env.str.9:
->>>>>>> origin/tomspretpakket
 	.asciz	"XA_HTTP_CLIENT_HANDLER_TYPE"
 	.size	.L.str.9, 28
 	.section	.rodata..L.str.10,"aMS",@progbits,1
