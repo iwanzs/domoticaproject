@@ -3,10 +3,16 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=visualstudio,xamarinstudio
 
 ### XamarinStudio ###
+bin/*
+obj/*
 bin/
 obj/
-Applicatie/arduinoApp/Week4/bin/
-Applicatie/GarduinoApp/Week4/obj/
+Applicatie/arduinoApp/Week4/bin/*
+Applicatie/GarduinoApp/Week4/obj/*
+Applicatie/GarduinoApp/Week4.Android/bin/*
+Applicatie/GarduinoApp/Week4.Android/obj/*
+Applicatie/GarduinoApp/Week4/bin/*
+Applicatie/GarduinoApp/Week4/obj/*
 *.userprefs
 .packages
 
