@@ -11,13 +11,25 @@ namespace Week4.Views
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
+        protected override bool OnBackButtonPressed() => true;
 
-        DatabaseManager dbManager = new DatabaseManager();
+        DatabaseManager databasemanager;
 
         public MainPage()
         {
             InitializeComponent();
-            UpdateLists();
+//            UpdateLists();
+//            NavigationPage.SetHasNavigationBar(this, false);
+            NavigationPage.SetHasBackButton(this, false);
+//            ((NavigationPage)Application.Current.MainPage).BarBackgroundColor = Color.FromHex("#0080FF");
+
+            //            List<Devices> profiles = databasemanager.GetProfiles();
+            //
+            //            DevicesList.ItemsSource = profiles;
+
+
+            //SetValue(NavigationPage.HasNavigationBarProperty, false);
+
         }
 
         private void UpdateLists()
