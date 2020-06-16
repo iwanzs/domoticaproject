@@ -5,6 +5,8 @@
 ### XamarinStudio ###
 bin/
 obj/
+Applicatie/arduinoApp/Week4/bin/
+Applicatie/GarduinoApp/Week4/obj/
 *.userprefs
 .packages
 
