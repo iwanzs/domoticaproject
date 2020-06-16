@@ -12,24 +12,34 @@ namespace Week4.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class RegisterPage : ContentPage
     {
-        DatabaseManager dbManager = new DatabaseManager();
+        DatabaseManager databasemanager;
+
         public RegisterPage()
         {
             InitializeComponent();
+
+            databasemanager = new DatabaseManager();
         }
 
         private void RegisterClicked(object sender, EventArgs e)
         {
-            if (UsernameInput.Text != "" && PasswordInput.Text != "")
+            if (Username.Text == null | Password.Text == null | RepeatPassword.Text == null)
+                return;
+            else if (Password.Text != RepeatPassword.Text)
             {
-                if (!dbManager.DoesAccountExist(UsernameInput.Text, PasswordInput.Text))
-                {
-                    dbManager.AddUser(UsernameInput.Text, PasswordInput.Text);
-                    Configuration.Username = UsernameInput.Text;
-                    Configuration.UserID = dbManager.GetUser().UserID;
-                    Navigation.PushAsync(new MasterPage());
-                }
+                Error.Text = "Het wachtwoord komt niet overeen";
+                return;
             }
+            else if (databasemanager.AddUser(Username.Text, Password.Text) == false)
+            {
+                Error.Text = "Dit account bestaat al";
+                return;
+            }
+            else if (databasemanager.AddUser(Username.Text, Password.Text) == true)
+            {
+                databasemanager.AddUser(Username.Text, Password.Text);
+            }
+            Navigation.PushAsync(new LoginPage());
         }
     }
 }

@@ -22,26 +22,10 @@ namespace Week4.Views
 
         private void UpdateLists()
         {
-            MovieList.ItemsSource = dbManager.GetAllMovies();
-            SerieList.ItemsSource = dbManager.GetAllSeries();
+            // Update of iets
         }
 
-        private void MovieList_ItemSelected(object sender, SelectedItemChangedEventArgs e)
-        {
-            var item = (Movie)e.SelectedItem;
-            int user = Configuration.UserID;
-            dbManager.AddFavoriteMovie(user, item.MovieID);
-
-        }
-
-        private void SerieList_ItemSelected(object sender, SelectedItemChangedEventArgs e)
-        {
-            var item = (Series)e.SelectedItem;
-            int user = Configuration.UserID;
-            dbManager.AddFavoriteSeries(user, item.SeriesID);
-        }
-
-        private void Button_Clicked(object sender, System.EventArgs e)
+        private void UpdateClicked(object sender, System.EventArgs e)
         {
             UpdateLists();
         }

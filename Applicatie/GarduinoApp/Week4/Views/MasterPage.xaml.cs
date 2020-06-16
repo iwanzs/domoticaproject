@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GarduinoApp.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,9 +22,9 @@ namespace Week4.Views
         {
             InitializeComponent();
             AccountName.Text = Configuration.Username;
-            MasterList.Add(new MasterPageItem { Title = "Movies & Series", Icon = "icon.jpg", TargetType = typeof(MainPage) });
-            MasterList.Add(new MasterPageItem { Title = "Favorites", Icon = "icon.jpg", TargetType = typeof(FavoritePage) });
-            MasterList.Add(new MasterPageItem { Title = "Add", Icon = "icon.jpg", TargetType = typeof(AddPage) });
+            MasterList.Add(new MasterPageItem { Title = "Home", Icon = "icon.jpg", TargetType = typeof(MainPage) });
+            MasterList.Add(new MasterPageItem { Title = "History", Icon = "icon.jpg", TargetType = typeof(HistoryPage) });
+            MasterList.Add(new MasterPageItem { Title = "Profiles", Icon = "icon.jpg", TargetType = typeof(ProfilePage) });
             NavigationDrawerList.ItemsSource = MasterList;
             NavigationPage.SetHasNavigationBar(this, false);
             Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(MainPage)));

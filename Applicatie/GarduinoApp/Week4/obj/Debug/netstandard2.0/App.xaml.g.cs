@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("Week4.App.xaml", "App.xaml", typeof(global::Week4.App))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("GarduinoApp.App.xaml", "App.xaml", typeof(global::Week4.App))]
 
 namespace Week4 {
     

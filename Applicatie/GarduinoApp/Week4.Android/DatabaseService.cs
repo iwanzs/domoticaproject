@@ -12,7 +12,7 @@ namespace Week4.Droid
     {
         public SQLiteConnection CreateConnection()
         {
-            var sqliteFilename = "MovieDB.db";
+            var sqliteFilename = "garduino.db";
             string documentsDirectoryPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
             var path = Path.Combine(documentsDirectoryPath, sqliteFilename);
 

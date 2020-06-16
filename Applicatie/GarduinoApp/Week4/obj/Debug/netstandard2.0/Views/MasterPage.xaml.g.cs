@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("Week4.Views.MasterPage.xaml", "Views/MasterPage.xaml", typeof(global::Week4.Views.MasterPage))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("GarduinoApp.Views.MasterPage.xaml", "Views/MasterPage.xaml", typeof(global::Week4.Views.MasterPage))]
 
 namespace Week4.Views {
     

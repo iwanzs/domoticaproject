@@ -7,14 +7,15 @@
              x:Class="Week4.Views.LoginPage">
     <ContentPage.Content>
         <StackLayout VerticalOptions="Center" Margin="32">
-            <Label x:Name="Username" Text="Username"></Label>
-            <Entry x:Name="UsernameInput" Placeholder="Vul uw gebruikersnaam in"></Entry>
-            <Label x:Name="Password" Text="Password"></Label>
-            <Entry x:Name="PasswordInput" Placeholder="Vul uw wachtwoord in" IsPassword="True"></Entry>
-            <Button HorizontalOptions="Center" Clicked="LoginClicked" Text="Login"></Button>
-            <Label Text="If you don't have an account yet, register here">
+            <Label Text="Username"></Label>
+            <Entry x:Name="Username" Placeholder="Vul uw gebruikersnaam in"></Entry>
+            <Label Text="Password"></Label>
+            <Entry x:Name="Password" Placeholder="Vul uw wachtwoord in" IsPassword="True"></Entry>
+            <Button Text="Login" x:Name="LoginButton" HorizontalOptions="Center" Clicked="LoginClicked"></Button>
+            <Label x:Name="Error" HorizontalOptions="Center"></Label>
+            <Label Text="Druk hier als u nog geen account heeft" HorizontalOptions="Center">
                 <Label.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="RegisterClicked"></TapGestureRecognizer>
+                    <TapGestureRecognizer Tapped="RegisterClicked"/>
                 </Label.GestureRecognizers>
             </Label>
         </StackLayout>

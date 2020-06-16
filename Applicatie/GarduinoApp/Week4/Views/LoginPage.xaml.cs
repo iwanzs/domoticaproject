@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GarduinoApp.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,23 +13,31 @@ namespace Week4.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LoginPage : ContentPage
     {
-        DatabaseManager dbManager = new DatabaseManager();
+        DatabaseManager databasemanager;
 
         public LoginPage()
         {
             InitializeComponent();
+
+            NavigationPage.SetHasNavigationBar(this, false);
+
+            databasemanager = new DatabaseManager();
         }
 
         private void LoginClicked(object sender, EventArgs e)
         {
-            if (UsernameInput.Text != "" && PasswordInput.Text != "")
+            if (Username.Text == null | Password.Text == null)
+                return;
+            else if (databasemanager.DoesAccountExist(Username.Text, Password.Text) == false)
             {
-                if (dbManager.DoesAccountExist(UsernameInput.Text, PasswordInput.Text))
-                {
-                    Configuration.Username = UsernameInput.Text;
-                    Configuration.UserID = dbManager.GetUser().UserID;
-                    Navigation.PushAsync(new MasterPage());
-                }
+                Error.Text = "Dit account bestaat niet";
+                return;
+            }
+            else if (databasemanager.DoesAccountExist(Username.Text, Password.Text) == true)
+            {
+                Configuration.Username = Username.Text;
+                Configuration.UserID = databasemanager.GetUser().UsersID;
+                Navigation.PushAsync(new ProfilePage());
             }
         }
 
