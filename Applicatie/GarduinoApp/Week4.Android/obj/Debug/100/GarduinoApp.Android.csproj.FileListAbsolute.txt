@@ -1084,3 +1084,5 @@ C:\Users\tomre\Desktop\GitHubDomotica\domoticaproject\Applicatie\GarduinoApp\Wee
 C:\Users\tomre\Desktop\GitHubDomotica\domoticaproject\Applicatie\GarduinoApp\Week4.Android\obj\Debug\100\stamp\_GenerateJavaStubs.stamp
 C:\Users\tomre\Desktop\GitHubDomotica\domoticaproject\Applicatie\GarduinoApp\Week4.Android\obj\Debug\100\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\tomre\Desktop\GitHubDomotica\domoticaproject\Applicatie\GarduinoApp\Week4.Android\obj\Debug\100\stamp\_ResolveLibraryProjectImports.stamp
+E:\Coding\Projecten\Git\domoticaproject\Applicatie\GarduinoApp\Week4.Android\obj\Debug\100\android\assets\Newtonsoft.Json.dll
+E:\Coding\Projecten\Git\domoticaproject\Applicatie\GarduinoApp\Week4.Android\obj\Debug\100\stamp\_CleanIntermediateIfNeeded.stamp

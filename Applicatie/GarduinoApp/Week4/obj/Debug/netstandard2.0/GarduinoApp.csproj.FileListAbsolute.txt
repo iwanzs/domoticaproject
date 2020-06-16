@@ -4,16 +4,12 @@ E:\Coding\Projecten\Git\domoticaproject\Applicatie\GarduinoApp\Week4\bin\Debug\n
 E:\Coding\Projecten\Git\domoticaproject\Applicatie\GarduinoApp\Week4\bin\Debug\netstandard2.0\GarduinoApp.pdb
 E:\Coding\Projecten\Git\domoticaproject\Applicatie\GarduinoApp\Week4\obj\Debug\netstandard2.0\GarduinoApp.csprojAssemblyReference.cache
 E:\Coding\Projecten\Git\domoticaproject\Applicatie\GarduinoApp\Week4\obj\Debug\netstandard2.0\App.xaml.g.cs
-E:\Coding\Projecten\Git\domoticaproject\Applicatie\GarduinoApp\Week4\obj\Debug\netstandard2.0\Views\AddPage.xaml.g.cs
-E:\Coding\Projecten\Git\domoticaproject\Applicatie\GarduinoApp\Week4\obj\Debug\netstandard2.0\Views\FavoritePage.xaml.g.cs
 E:\Coding\Projecten\Git\domoticaproject\Applicatie\GarduinoApp\Week4\obj\Debug\netstandard2.0\Views\LoginPage.xaml.g.cs
 E:\Coding\Projecten\Git\domoticaproject\Applicatie\GarduinoApp\Week4\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
 E:\Coding\Projecten\Git\domoticaproject\Applicatie\GarduinoApp\Week4\obj\Debug\netstandard2.0\Views\MasterPage.xaml.g.cs
 E:\Coding\Projecten\Git\domoticaproject\Applicatie\GarduinoApp\Week4\obj\Debug\netstandard2.0\Views\RegisterPage.xaml.g.cs
-E:\Coding\Projecten\Git\domoticaproject\Applicatie\GarduinoApp\Week4\obj\Debug\netstandard2.0\GarduinoApp.csproj.CoreCompileInputs.cache
 E:\Coding\Projecten\Git\domoticaproject\Applicatie\GarduinoApp\Week4\obj\Debug\netstandard2.0\GarduinoApp.AssemblyInfoInputs.cache
 E:\Coding\Projecten\Git\domoticaproject\Applicatie\GarduinoApp\Week4\obj\Debug\netstandard2.0\GarduinoApp.AssemblyInfo.cs
-E:\Coding\Projecten\Git\domoticaproject\Applicatie\GarduinoApp\Week4\obj\Debug\netstandard2.0\XamlC.stamp
 E:\Coding\Projecten\Git\domoticaproject\Applicatie\GarduinoApp\Week4\obj\Debug\netstandard2.0\GarduinoApp.dll
 E:\Coding\Projecten\Git\domoticaproject\Applicatie\GarduinoApp\Week4\obj\Debug\netstandard2.0\ref\GarduinoApp.dll
 E:\Coding\Projecten\Git\domoticaproject\Applicatie\GarduinoApp\Week4\obj\Debug\netstandard2.0\GarduinoApp.pdb
@@ -36,3 +32,9 @@ C:\Users\tomre\Desktop\GitHubDomotica\domoticaproject\Applicatie\GarduinoApp\Wee
 C:\Users\tomre\Desktop\GitHubDomotica\domoticaproject\Applicatie\GarduinoApp\Week4\bin\Debug\netstandard2.0\ref\GarduinoApp.dll
 C:\Users\tomre\Desktop\GitHubDomotica\domoticaproject\Applicatie\GarduinoApp\Week4\bin\Debug\netstandard2.0\GarduinoApp.pdb
 C:\Users\tomre\Desktop\GitHubDomotica\domoticaproject\Applicatie\GarduinoApp\Week4\obj\Debug\netstandard2.0\XamlC.stamp
+E:\Coding\Projecten\Git\domoticaproject\Applicatie\GarduinoApp\Week4\obj\Debug\netstandard2.0\Views\AddProfile.xaml.g.cs
+E:\Coding\Projecten\Git\domoticaproject\Applicatie\GarduinoApp\Week4\obj\Debug\netstandard2.0\Views\CurrentWeatherPage.xaml.g.cs
+E:\Coding\Projecten\Git\domoticaproject\Applicatie\GarduinoApp\Week4\obj\Debug\netstandard2.0\Views\HistoryPage.xaml.g.cs
+E:\Coding\Projecten\Git\domoticaproject\Applicatie\GarduinoApp\Week4\obj\Debug\netstandard2.0\Views\ProfilePage.xaml.g.cs
+E:\Coding\Projecten\Git\domoticaproject\Applicatie\GarduinoApp\Week4\obj\Debug\netstandard2.0\GarduinoApp.csproj.CoreCompileInputs.cache
+E:\Coding\Projecten\Git\domoticaproject\Applicatie\GarduinoApp\Week4\obj\Debug\netstandard2.0\XamlC.stamp
