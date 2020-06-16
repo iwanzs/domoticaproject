@@ -6,18 +6,20 @@
              mc:Ignorable="d"
              x:Class="GarduinoApp.Views.AddProfile">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout Margin="20,35,20,20">
             <Label Text="Create Profile" FontAttributes="Bold" FontSize="25" TextColor="Black"></Label>
             <Label Text="Name"></Label>
-            <Entry x:Name="Name" Placeholder="Welke naam?"></Entry>
+            <Entry x:Name="Name" Placeholder="What name?"></Entry>
             <Label Text="Threshold"></Label>
-            <Entry x:Name="Threshold" Placeholder="Welke drempel?"></Entry>
+            <Entry x:Name="Threshold" Placeholder="What threshold?" Keyboard="Numeric"></Entry>
             <Label Text="IP"></Label>
-            <Entry x:Name="IP" Placeholder="Welk ip?"></Entry>
+            <Entry x:Name="IP" Placeholder="Which ip?"></Entry>
             <Label Text="Port"></Label>
-            <Entry x:Name="Port" Placeholder="Welke poort?"></Entry>
+            <Entry x:Name="Port" Placeholder="Which port?" Keyboard="Numeric"></Entry>
             <Label Text="ArduinoPinNumber"></Label>
-            <Entry x:Name="ArduinoPinNumber" Placeholder="Welke pin?"></Entry>
+            <Entry x:Name="ArduinoPinNumber" Placeholder="Which pin?" Keyboard="Numeric"></Entry>
+            <Button x:Name="CreateButton" Clicked="CreateProfile" Text="Create"></Button>
+            <Label x:Name="Error" HorizontalOptions="Center"></Label>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

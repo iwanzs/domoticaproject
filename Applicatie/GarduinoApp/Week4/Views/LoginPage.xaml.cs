@@ -30,7 +30,7 @@ namespace Week4.Views
                 return;
             else if (databasemanager.DoesAccountExist(Username.Text, Password.Text) == false)
             {
-                Error.Text = "Dit account bestaat niet";
+                Error.Text = "This account does not exist";
                 return;
             }
             else if (databasemanager.DoesAccountExist(Username.Text, Password.Text) == true)

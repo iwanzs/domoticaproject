@@ -36,3 +36,4 @@ C:\Users\tomre\Desktop\GitHubDomotica\domoticaproject\Applicatie\GarduinoApp\Wee
 C:\Users\tomre\Desktop\GitHubDomotica\domoticaproject\Applicatie\GarduinoApp\Week4\bin\Debug\netstandard2.0\ref\GarduinoApp.dll
 C:\Users\tomre\Desktop\GitHubDomotica\domoticaproject\Applicatie\GarduinoApp\Week4\bin\Debug\netstandard2.0\GarduinoApp.pdb
 C:\Users\tomre\Desktop\GitHubDomotica\domoticaproject\Applicatie\GarduinoApp\Week4\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\tomre\Desktop\GitHubDomotica\domoticaproject\Applicatie\GarduinoApp\Week4\obj\Debug\netstandard2.0\Views\AddProfile.xaml.g.cs

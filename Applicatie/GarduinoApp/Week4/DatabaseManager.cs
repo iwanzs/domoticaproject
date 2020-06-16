@@ -61,9 +61,25 @@ namespace Week4
             }
         }
 
+        public void AddProfile(string Name, int Threshold, string IP, string Port, int ArduinoPinNumber)
+        {
+            Profiles profile = new Profiles() { UserID = Configuration.UserID, Name = Name, Threshold = Threshold, IP = IP, Port = Port, ArduinoPinNumber = ArduinoPinNumber };
+            dbConnection.Insert(profile);
+        }
+
+        public void DeleteProfile(int ID, int UserID)
+        {
+            dbConnection.Execute("DELETE FROM [Profiles] WHERE ID = ? AND UserID = ? ", ID, UserID);
+        }
+
         public List<Profiles> GetProfiles()
         {
             return dbConnection.Query<Profiles>("SELECT * FROM [Profiles] WHERE UserID='" + Configuration.UserID + "'");
+        }
+
+        public Profiles GetProfileInformation(int ID)
+        {
+            return dbConnection.FindWithQuery<Profiles>("SELECT * FROM [Profiles] WHERE ID ='" + ID + "'");
         }
     }
 }

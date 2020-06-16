@@ -27,12 +27,12 @@ namespace Week4.Views
                 return;
             else if (Password.Text != RepeatPassword.Text)
             {
-                Error.Text = "Het wachtwoord komt niet overeen";
+                Error.Text = "The password does not match";
                 return;
             }
             else if (databasemanager.AddUser(Username.Text, Password.Text) == false)
             {
-                Error.Text = "Dit account bestaat al";
+                Error.Text = "This username already exists";
                 return;
             }
             else if (databasemanager.AddUser(Username.Text, Password.Text) == true)

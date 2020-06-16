@@ -9,8 +9,6 @@ namespace Week4
         public static string Username { get; set; }
 
         public static int UserID { get; set; }
-
-        
     }
 
 }
