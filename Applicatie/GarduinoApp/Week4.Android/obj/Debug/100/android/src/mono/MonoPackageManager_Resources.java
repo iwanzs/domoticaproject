@@ -5,6 +5,7 @@ public class MonoPackageManager_Resources {
 		"Week4.Android.dll",
 		"FormsViewGroup.dll",
 		"GarduinoApp.dll",
+		"Newtonsoft.Json.dll",
 		"SQLite-net.dll",
 		"SQLitePCLRaw.batteries_v2.dll",
 		"SQLitePCLRaw.core.dll",
