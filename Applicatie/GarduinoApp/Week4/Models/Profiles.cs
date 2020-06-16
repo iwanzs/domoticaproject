@@ -13,6 +13,8 @@ namespace GarduinoApp.Models
         public int UserID { get; set; }
         [NotNull]
         public string Name { get; set; }
+        [Ignore]
+        public string FirstLetter => Name[0].ToString().ToUpper();
         [NotNull]
         public int Threshold { get; set; }
         [NotNull]
@@ -21,7 +23,5 @@ namespace GarduinoApp.Models
         public string Port { get; set; }
         [NotNull]
         public int ArduinoPinNumber { get; set; }
-
-
     }
 }

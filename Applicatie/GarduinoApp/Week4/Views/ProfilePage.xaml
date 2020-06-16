@@ -18,11 +18,17 @@
                 <Label Text="Profiles" FontAttributes="Bold" FontSize="25" TextColor="Black" HorizontalOptions="Start" VerticalOptions="Center" Grid.Row="0" Grid.Column="0"/>
                 <Button Text="+" FontSize="25" HeightRequest="45" WidthRequest="45" FontAttributes="Bold" TextColor="Black" HorizontalOptions="End" VerticalOptions="Center" Grid.Row="0" Grid.Column="1" Clicked="AddProfile"/>
             </Grid>
-            <ListView x:Name="ProfilesList" ItemTapped="SelectProfile">
+            <ListView x:Name="ProfilesList" HasUnevenRows="True" ItemTapped="SelectProfile">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Grid Padding="10">
+                            <SwipeView>
+                                <SwipeView.RightItems>
+                                    <SwipeItems>
+                                        <SwipeItem Text="Delete" BackgroundColor="LightPink" CommandParameter="{Binding}" Invoked="OnDeleteSwipeItemInvoked" />
+                                    </SwipeItems>
+                                </SwipeView.RightItems>
+                                <Grid Padding="10">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="Auto" />
                                     <RowDefinition Height="*" />
@@ -31,12 +37,16 @@
                                     <ColumnDefinition Width="Auto" />
                                     <ColumnDefinition Width="*" />
                                 </Grid.ColumnDefinitions>
-                                <Frame BackgroundColor="LightBlue" Grid.RowSpan="2" WidthRequest="60" HeightRequest="60">
-                                    <Label x:Name="FirstChar"></Label>
-                                </Frame>
+                                <Image Grid.RowSpan="2" 
+                                   BackgroundColor="LightBlue"
+                                   Aspect="AspectFill"
+                                   HeightRequest="60"
+                                   WidthRequest="60" />
+                                <Label x:Name="FirstChar" Text="{Binding FirstLetter}" FontSize="20" Grid.RowSpan="2" HorizontalOptions="Center" VerticalOptions="Center"></Label>
                                 <Label Grid.Column="1" Text="{Binding Name}" FontAttributes="Bold" />
                                 <Label Grid.Row="1" Grid.Column="1" Text="{Binding IP}" VerticalOptions="End" />
                             </Grid>
+                            </SwipeView>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>

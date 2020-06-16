@@ -26,3 +26,8 @@ os=windows_nt
 designtimebuild=false
 androidincludedebugsymbols=true
 androidpackagenamingpolicy=lowercasecrc64
+<<<<<<< HEAD
+=======
+_nugetassetstimestamp=637279065894111348
+typemapkind=strings-asm
+>>>>>>> origin/tomspretpakket

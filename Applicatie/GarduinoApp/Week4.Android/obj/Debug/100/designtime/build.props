@@ -24,5 +24,9 @@ androidgeneratejnimarshalmethods=false
 os=windows_nt
 androidincludedebugsymbols=true
 androidpackagenamingpolicy=lowercasecrc64
+<<<<<<< HEAD
 _nugetassetstimestamp=637279289357333074
+=======
+_nugetassetstimestamp=637279065894111348
+>>>>>>> origin/tomspretpakket
 typemapkind=strings-asm
