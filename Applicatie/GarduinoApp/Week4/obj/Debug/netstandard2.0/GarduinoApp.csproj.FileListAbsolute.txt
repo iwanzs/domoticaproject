@@ -40,7 +40,6 @@ D:\vsProjects\Applicatie\GarduinoApp\Week4\bin\Debug\netstandard2.0\GarduinoApp.
 D:\vsProjects\Applicatie\GarduinoApp\Week4\bin\Debug\netstandard2.0\GarduinoApp.dll
 D:\vsProjects\Applicatie\GarduinoApp\Week4\bin\Debug\netstandard2.0\ref\GarduinoApp.dll
 D:\vsProjects\Applicatie\GarduinoApp\Week4\bin\Debug\netstandard2.0\GarduinoApp.pdb
-D:\vsProjects\Applicatie\GarduinoApp\Week4\obj\Debug\netstandard2.0\GarduinoApp.csprojAssemblyReference.cache
 D:\vsProjects\Applicatie\GarduinoApp\Week4\obj\Debug\netstandard2.0\App.xaml.g.cs
 D:\vsProjects\Applicatie\GarduinoApp\Week4\obj\Debug\netstandard2.0\Views\AddProfile.xaml.g.cs
 D:\vsProjects\Applicatie\GarduinoApp\Week4\obj\Debug\netstandard2.0\Views\HistoryPage.xaml.g.cs
@@ -56,3 +55,4 @@ D:\vsProjects\Applicatie\GarduinoApp\Week4\obj\Debug\netstandard2.0\ref\Garduino
 D:\vsProjects\Applicatie\GarduinoApp\Week4\obj\Debug\netstandard2.0\GarduinoApp.pdb
 D:\vsProjects\Applicatie\GarduinoApp\Week4\obj\Debug\netstandard2.0\GarduinoApp.csproj.CoreCompileInputs.cache
 D:\vsProjects\Applicatie\GarduinoApp\Week4\obj\Debug\netstandard2.0\XamlC.stamp
+D:\vsProjects\Applicatie\GarduinoApp\Week4\obj\Debug\netstandard2.0\GarduinoApp.csprojAssemblyReference.cache

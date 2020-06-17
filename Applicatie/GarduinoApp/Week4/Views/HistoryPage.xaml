@@ -3,15 +3,25 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:oxy="clr-namespace:OxyPlot.Xamarin.Forms;assembly=OxyPlot.Xamarin.Forms"
+             xmlns:oxy="clr-namespace:OxyPlot.Xamarin.Forms;assembly=OxyPlot.Xamarin.Forms" xmlns:local="clr-namespace:GarduinoApp.Views"
              mc:Ignorable="d"
              x:Class="GarduinoApp.Views.HistoryPage">
     <ContentPage.Content>
         <StackLayout>
+            <!--<StackLayout.BindingContext>
+                <local:HistoryPage/>
+            </StackLayout.BindingContext>-->
             <AbsoluteLayout>
-                <oxy:PlotView Model="{Binding Graph}"  
+                <!--<oxy:PlotView x:Name="LineGraph"
                   AbsoluteLayout.LayoutBounds="20,0,.9,.9"  
-                  AbsoluteLayout.LayoutFlags="WidthProportional,HeightProportional" />
+                  AbsoluteLayout.LayoutFlags="WidthProportional,HeightProportional" />-->
+
+                <oxy:PlotView x:Name="LineGraph" Grid.Row="0" Grid.Column="0" 
+                      VerticalOptions="Center" 
+                      HorizontalOptions="Center" 
+                      WidthRequest="350"
+                      HeightRequest="300"
+                      />
             </AbsoluteLayout>
         </StackLayout>
     </ContentPage.Content>
