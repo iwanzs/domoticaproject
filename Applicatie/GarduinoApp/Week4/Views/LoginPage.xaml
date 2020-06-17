@@ -8,12 +8,12 @@
     <ContentPage.Content>
         <StackLayout VerticalOptions="Center" Margin="32">
             <Label Text="Username"></Label>
-            <Entry x:Name="Username" Placeholder="Vul uw gebruikersnaam in"></Entry>
+            <Entry x:Name="Username" Placeholder="Enter your username"></Entry>
             <Label Text="Password"></Label>
-            <Entry x:Name="Password" Placeholder="Vul uw wachtwoord in" IsPassword="True"></Entry>
+            <Entry x:Name="Password" Placeholder="Enter your password" IsPassword="True"></Entry>
             <Button Text="Login" x:Name="LoginButton" HorizontalOptions="Center" Clicked="LoginClicked"></Button>
             <Label x:Name="Error" HorizontalOptions="Center"></Label>
-            <Label Text="Druk hier als u nog geen account heeft" HorizontalOptions="Center">
+            <Label Text="If you don't have an account yet, register here" HorizontalOptions="Center">
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer Tapped="RegisterClicked"/>
                 </Label.GestureRecognizers>

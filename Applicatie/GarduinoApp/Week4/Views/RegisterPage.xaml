@@ -8,11 +8,11 @@
     <ContentPage.Content>
         <StackLayout VerticalOptions="Center" Margin="32">
             <Label Text="Username"></Label>
-            <Entry x:Name="Username" Placeholder="Vul uw gebruikersnaam in"></Entry>
+            <Entry x:Name="Username" Placeholder="Enter your username"></Entry>
             <Label Text="Password"></Label>
-            <Entry x:Name="Password" IsPassword="True" Placeholder="Vul uw wachtwoord in"></Entry>
+            <Entry x:Name="Password" IsPassword="True" Placeholder="Enter your password"></Entry>
             <Label Text="Repeat Password"></Label>
-            <Entry x:Name="RepeatPassword" IsPassword="True" Placeholder="Vul uw wachtwoord nogmaals in"></Entry>
+            <Entry x:Name="RepeatPassword" IsPassword="True" Placeholder="Confirm your password"></Entry>
             <Label x:Name="Error" HorizontalOptions="Center"></Label>
             <Button Text="Register" x:Name="RegisterButton" HorizontalOptions="Center" Clicked="RegisterClicked"></Button>
         </StackLayout>

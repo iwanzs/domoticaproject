@@ -10,7 +10,10 @@ namespace Week4
 
         public static int UserID { get; set; }
 
-        
+        //Connection Endpoint for the API
+        public static string OpenWeatherMapEndpoint = "https://api.openweathermap.org/data/2.5/weather";
+        //API Key to connect with the API
+        public static string OpenWeatherMapAPIKey = "a50e98f4a2873317139fba8740468d4c";
     }
 
 }
