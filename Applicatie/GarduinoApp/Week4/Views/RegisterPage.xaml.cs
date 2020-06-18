@@ -23,8 +23,11 @@ namespace Week4.Views
 
         private void RegisterClicked(object sender, EventArgs e)
         {
-            if (Username.Text == null | Password.Text == null | RepeatPassword.Text == null)
+            if (string.IsNullOrEmpty(Username.Text) | string.IsNullOrEmpty(Password.Text) | string.IsNullOrEmpty(RepeatPassword.Text))
+            {
+                Error.Text = "Please enter all credentials";
                 return;
+            }
             else if (Password.Text != RepeatPassword.Text)
             {
                 Error.Text = "The password does not match";

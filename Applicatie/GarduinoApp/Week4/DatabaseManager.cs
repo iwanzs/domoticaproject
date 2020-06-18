@@ -67,6 +67,11 @@ namespace Week4
             dbConnection.Insert(profile);
         }
 
+        public void EditProfile(int ID, string Name, int Threshold, string IP, string Port, int ArduinoPinNumber)
+        {
+            dbConnection.Execute("UPDATE [Profiles] SET Name = ?, Threshold = ?, IP = ?, Port = ?, ArduinoPinNumber = ? WHERE ID = ? AND UserID = ? ", Name, Threshold, IP, Port, ArduinoPinNumber, ID, Configuration.UserID);
+        }
+
         public void DeleteProfile(int ID, int UserID)
         {
             dbConnection.Execute("DELETE FROM [Profiles] WHERE ID = ? AND UserID = ? ", ID, UserID);
@@ -77,9 +82,9 @@ namespace Week4
             return dbConnection.Query<Profiles>("SELECT * FROM [Profiles] WHERE UserID='" + Configuration.UserID + "'");
         }
 
-        public Profiles GetProfileInformation(int ID)
+        public Profiles GetProfileInformation()
         {
-            return dbConnection.FindWithQuery<Profiles>("SELECT * FROM [Profiles] WHERE ID ='" + ID + "'");
+            return dbConnection.FindWithQuery<Profiles>("SELECT * FROM [Profiles]");
         }
     }
 }

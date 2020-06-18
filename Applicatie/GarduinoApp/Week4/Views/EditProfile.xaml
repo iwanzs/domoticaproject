@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="GarduinoApp.Views.EditProfile">
+    <ContentPage.Content>
+        <StackLayout Margin="20,35,20,20">
+            <Label Text="Edit Profile" FontAttributes="Bold" FontSize="25" TextColor="Black"></Label>
+            <Label Text="Name"></Label>
+            <Entry x:Name="Name" Placeholder="What name? E.g.: Sprinkler"></Entry>
+            <Label Text="Threshold"></Label>
+            <Entry x:Name="Threshold" Placeholder="What threshold? E.g.: 10" Keyboard="Numeric"></Entry>
+            <Label Text="IP"></Label>
+            <Entry x:Name="IP" Placeholder="Which ip? E.g.: xxx,xxx,xxx,xxx"></Entry>
+            <Label Text="Port"></Label>
+            <Entry x:Name="Port" Placeholder="Which port? E.g.: 80" Keyboard="Numeric"></Entry>
+            <Label Text="ArduinoPinNumber"></Label>
+            <Entry x:Name="ArduinoPinNumber" Placeholder="Which pin? E.g.: 13" Keyboard="Numeric"></Entry>
+            <Button x:Name="ChangeButton" Clicked="ChangeProfile" Text="Edit"></Button>
+            <Button x:Name="CancelButton" Clicked="CancelProfile" Text="Cancel"></Button>
+            <Label x:Name="Error" HorizontalOptions="Center"></Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
