@@ -42,7 +42,8 @@ namespace Week4.Views
             {
                 Configuration.Username = Username.Text;
                 Configuration.UserID = databasemanager.GetUser().UserID;
-                Navigation.PushAsync(new ProfilePage());
+                //Navigation.PushAsync(new ProfilePage());
+                Navigation.PushAsync(new CurrentWeatherPage());
             }
         }
 
