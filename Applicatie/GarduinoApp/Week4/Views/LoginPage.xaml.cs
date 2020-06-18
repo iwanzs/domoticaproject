@@ -15,6 +15,8 @@ namespace Week4.Views
     {
         DatabaseManager databasemanager;
 
+        protected override bool OnBackButtonPressed() => true;
+
         public LoginPage()
         {
             InitializeComponent();
@@ -26,8 +28,11 @@ namespace Week4.Views
 
         private void LoginClicked(object sender, EventArgs e)
         {
-            if (Username.Text == null | Password.Text == null)
+            if (string.IsNullOrEmpty(Username.Text) | string.IsNullOrEmpty(Password.Text))
+            {
+                Error.Text = "Please enter all credentials";
                 return;
+            }
             else if (databasemanager.DoesAccountExist(Username.Text, Password.Text) == false)
             {
                 Error.Text = "This account does not exist";

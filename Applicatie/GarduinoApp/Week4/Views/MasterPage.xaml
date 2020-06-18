@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<MasterDetailPage Title="Movies and Series" xmlns="http://xamarin.com/schemas/2014/forms"
+<MasterDetailPage Title="" xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:Week4.MenuItems"
@@ -14,19 +14,19 @@
                 </Grid.RowDefinitions>
 
                 <Grid>
-                    <Image Source="Images/bg.jpg" Aspect="AspectFill"></Image>
+                    <Image Source="Images/SkyCloudsBG.jpg" Aspect="AspectFill"></Image>
                     <StackLayout Padding="0, 20, 0, 0" HorizontalOptions="Center" VerticalOptions="Center">
-                        <Label x:Name="AccountName" Text="{Binding AccountName}" TextColor="Red" FontSize="Large"></Label>
+                        <Label x:Name="ProfileName" Text="{Binding ProfileName}" FontAttributes="Bold" FontSize="28"></Label>
                     </StackLayout>
                 </Grid>
-                <StackLayout Grid.Row="2" Spacing="8">
+                <StackLayout Grid.Row="1" Spacing="8" x:Name="MenuPage">
                     <ListView x:Name="NavigationDrawerList" ItemSelected="OnMenuItemSelected" RowHeight="48" SeparatorVisibility="None">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <local:CustomViewCell SelectedItemBackgroundColor="#0078FF">
                                     <ViewCell.View>
-                                        <StackLayout VerticalOptions="FillAndExpand" Orientation="Horizontal" Padding="20,0,0,0" Spacing="12">
-                                            <Image>
+                                        <StackLayout VerticalOptions="FillAndExpand" Orientation="Horizontal" Padding="20,0,20,0" Spacing="12">
+                                            <Image HeightRequest="30" WidthRequest="30">
                                                 <Image.Source>
                                                     <FileImageSource File="{Binding Icon}"></FileImageSource>
                                                 </Image.Source>

@@ -17,16 +17,20 @@ namespace GarduinoApp.Views
     {
         DatabaseManager databasemanager;
 
+        protected override bool OnBackButtonPressed() => true;
+
         public AddProfile()
         {
             InitializeComponent();
+
+            NavigationPage.SetHasBackButton(this, false);
 
             databasemanager = new DatabaseManager();
         }
 
         private void CreateProfile(object sender, EventArgs e)
         {
-            if (Name.Text == null | Threshold.Text == null | IP.Text == null | Port.Text == null | ArduinoPinNumber == null)
+            if (string.IsNullOrEmpty(Name.Text) | string.IsNullOrEmpty(Threshold.Text) | string.IsNullOrEmpty(IP.Text) | string.IsNullOrEmpty(Port.Text) | string.IsNullOrEmpty(ArduinoPinNumber.Text))
             {
                 Error.Text = "Please enter all the information";
                 return;
@@ -36,6 +40,11 @@ namespace GarduinoApp.Views
                 databasemanager.AddProfile(Name.Text, Convert.ToInt32(Threshold.Text), IP.Text, Port.Text, Convert.ToInt32(ArduinoPinNumber.Text));
                 Navigation.PushAsync(new ProfilePage());
             }
+        }
+
+        private void CancelProfile(object sender, EventArgs e)
+        {
+            Navigation.PopAsync();
         }
     }
 }

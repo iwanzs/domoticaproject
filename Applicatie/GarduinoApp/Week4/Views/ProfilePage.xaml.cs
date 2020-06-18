@@ -19,15 +19,13 @@ namespace GarduinoApp.Views
 
         DatabaseManager databasemanager;
 
-        public Color BgColor { get; set; }
-
         public ProfilePage()
         {
             InitializeComponent();
 
             databasemanager = new DatabaseManager();
 
-            NavigationPage.SetHasNavigationBar(this, false);
+            NavigationPage.SetHasBackButton(this, false);
 
             GetProfiles();
         }
@@ -42,7 +40,7 @@ namespace GarduinoApp.Views
         private void SelectProfile(object sender, ItemTappedEventArgs e)
         {
             var myItem = (Profiles)e.Item;
-            databasemanager.GetProfileInformation(myItem.ID);
+            databasemanager.GetProfileInformation();
             Navigation.PushAsync(new MasterPage());
         }
 
@@ -58,6 +56,14 @@ namespace GarduinoApp.Views
             databasemanager.DeleteProfile(param.ID, param.UserID);
 
             GetProfiles();
+        }
+
+        private void OnEditSwipeItemInvoked(object sender, EventArgs e)
+        {
+            var item = (SwipeItem)sender;
+            var param = (Profiles)item.CommandParameter;
+
+            Navigation.PushAsync(new EditProfile());
         }
     }
 }
