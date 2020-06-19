@@ -61,6 +61,7 @@
     <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomEntryRendererAndroid.cs" />
     <Compile Include="CustomViewCellRenderer.cs" />
     <Compile Include="DatabaseService.cs" />
     <Compile Include="MainActivity.cs" />
@@ -69,6 +70,7 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\garduino.db" />
+    <AndroidAsset Include="Assets\CandyBeans.otf" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />
@@ -126,6 +128,15 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\LogoutIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\gardenbg5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\gardenbg2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\gardenbg6.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

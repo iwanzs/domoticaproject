@@ -30,7 +30,7 @@ namespace GarduinoApp.Views
 
             databasemanager = new DatabaseManager();
 
-            Profiles currentProfile = databasemanager.GetProfileInformation();
+            Profiles currentProfile = databasemanager.GetProfileInformation(Configuration.ProfileID);
             profileID = currentProfile.ID;
 
             Name.Text = currentProfile.Name;

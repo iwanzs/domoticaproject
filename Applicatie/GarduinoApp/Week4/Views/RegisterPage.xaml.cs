@@ -14,9 +14,17 @@ namespace Week4.Views
     {
         DatabaseManager databasemanager;
 
+        protected override bool OnBackButtonPressed() => true;
+
         public RegisterPage()
         {
             InitializeComponent();
+
+            NavigationPage.SetHasNavigationBar(this, false);
+
+            RegisterButton.BorderColor = Color.FromHex("6b4031");
+            RegisterButton.TextColor = Color.FromHex("543226");
+            LoginText.TextColor = Color.FromRgb(220, 220, 220);
 
             databasemanager = new DatabaseManager();
         }
@@ -43,6 +51,11 @@ namespace Week4.Views
                 databasemanager.AddUser(Username.Text, Password.Text);
             }
             Navigation.PushAsync(new LoginPage());
+        }
+
+        private void LoginClicked(object sender, EventArgs e)
+        {
+            Navigation.PopAsync();
         }
     }
 }

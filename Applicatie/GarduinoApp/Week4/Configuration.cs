@@ -9,6 +9,7 @@ namespace Week4
         public static string Username { get; set; }
 
         public static int UserID { get; set; }
+        public static int ProfileID { get; set; }
 
         //Connection Endpoint for the API
         public static string OpenWeatherMapEndpoint = "https://api.openweathermap.org/data/2.5/weather";

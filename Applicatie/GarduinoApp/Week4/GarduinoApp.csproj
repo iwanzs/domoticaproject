@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -21,11 +21,7 @@
     <EmbeddedResource Update="Views\AddProfile.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-<<<<<<< Updated upstream
-    <EmbeddedResource Update="Views\CurrentWeatherPage.xaml">
-=======
     <EmbeddedResource Update="Views\EditProfile.xaml">
->>>>>>> Stashed changes
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\HistoryPage.xaml">

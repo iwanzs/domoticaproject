@@ -23,6 +23,10 @@ namespace Week4.Views
 
             NavigationPage.SetHasNavigationBar(this, false);
 
+            LoginButton.BorderColor = Color.FromHex("6b4031");
+            LoginButton.TextColor = Color.FromHex("543226");
+            RegisterText.TextColor = Color.FromHex("362019");
+
             databasemanager = new DatabaseManager();
         }
 
@@ -42,8 +46,7 @@ namespace Week4.Views
             {
                 Configuration.Username = Username.Text;
                 Configuration.UserID = databasemanager.GetUser().UserID;
-                //Navigation.PushAsync(new ProfilePage());
-                Navigation.PushAsync(new CurrentWeatherPage());
+                Navigation.PushAsync(new ProfilePage());
             }
         }
 

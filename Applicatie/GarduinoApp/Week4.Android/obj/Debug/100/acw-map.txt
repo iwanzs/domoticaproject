@@ -1,3 +1,6 @@
+Week4.Droid.CustomEntryRendererAndroid, Week4.Android;crc6490d209528f930e91.CustomEntryRendererAndroid
+Week4.Droid.CustomEntryRendererAndroid;crc6490d209528f930e91.CustomEntryRendererAndroid
+week4.droid.CustomEntryRendererAndroid;crc6490d209528f930e91.CustomEntryRendererAndroid
 Week4.Droid.MainActivity, Week4.Android;crc6490d209528f930e91.MainActivity
 Week4.Droid.MainActivity;crc6490d209528f930e91.MainActivity
 week4.droid.MainActivity;crc6490d209528f930e91.MainActivity

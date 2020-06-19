@@ -40,7 +40,8 @@ namespace GarduinoApp.Views
         private void SelectProfile(object sender, ItemTappedEventArgs e)
         {
             var myItem = (Profiles)e.Item;
-            databasemanager.GetProfileInformation();
+            databasemanager.GetProfileInformation(myItem.ID);
+            Configuration.ProfileID = myItem.ID;
             Navigation.PushAsync(new MasterPage());
         }
 
@@ -62,7 +63,7 @@ namespace GarduinoApp.Views
         {
             var item = (SwipeItem)sender;
             var param = (Profiles)item.CommandParameter;
-
+            databasemanager.GetProfileInformation(param.ID);
             Navigation.PushAsync(new EditProfile());
         }
     }

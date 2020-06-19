@@ -4,17 +4,47 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="Week4.Views.RegisterPage">
+             x:Class="Week4.Views.RegisterPage"
+             BackgroundImage="gardenbg6.jpg"
+             >
     <ContentPage.Content>
-        <StackLayout VerticalOptions="Center" Margin="32">
-            <Label Text="Username"></Label>
-            <Entry x:Name="Username" Placeholder="Enter your username"></Entry>
-            <Label Text="Password"></Label>
-            <Entry x:Name="Password" IsPassword="True" Placeholder="Enter your password"></Entry>
-            <Label Text="Repeat Password"></Label>
-            <Entry x:Name="RepeatPassword" IsPassword="True" Placeholder="Confirm your password"></Entry>
-            <Label x:Name="Error" HorizontalOptions="Center"></Label>
-            <Button Text="Register" x:Name="RegisterButton" HorizontalOptions="Center" Clicked="RegisterClicked"></Button>
-        </StackLayout>
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*"></RowDefinition>
+                <RowDefinition Height="3*"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <StackLayout VerticalOptions="Center" Grid.Row="0">
+                <Label Text="Garduino" VerticalOptions="Center" FontSize="45" FontFamily="CandyBeans.otf#Candy" HorizontalOptions="Center" Grid.Row="0"></Label>
+                <Label Text="More Than Just An App" VerticalOptions="Center" FontSize="20" FontFamily="CandyBeans.otf#Candy" HorizontalOptions="Center" Grid.Row="0"></Label>
+            </StackLayout>
+            <StackLayout VerticalOptions="Center" Margin="32" Grid.Row="1">
+                <Label Text="Username" FontFamily="CandyBeans.otf#Candy"></Label>
+                <Entry x:Name="Username" Placeholder="Enter your username" FontFamily="CandyBeans.otf#Candy"></Entry>
+                <Label Text="Password" FontFamily="CandyBeans.otf#Candy"></Label>
+                <Entry x:Name="Password" IsPassword="True" Placeholder="Enter your password" FontFamily="CandyBeans.otf#Candy"></Entry>
+                <Label Text="Repeat Password" FontFamily="CandyBeans.otf#Candy"></Label>
+                <Entry x:Name="RepeatPassword" IsPassword="True" Placeholder="Confirm your password" FontFamily="CandyBeans.otf#Candy"></Entry>
+            </StackLayout>
+            <StackLayout VerticalOptions="Center" Grid.Row="2" Margin="32,0,32,0">
+                <Button x:Name="RegisterButton" Text="Register" FontFamily="CandyBeans.otf#Candy" HorizontalOptions="Center" Clicked="RegisterClicked" BackgroundColor="Transparent" CornerRadius="20" BorderWidth="5" HeightRequest="50" WidthRequest="500"></Button>
+                <Label x:Name="Error" FontFamily="CandyBeans.otf#Candy" HorizontalOptions="Center" Grid.Row="1"></Label>
+            </StackLayout>
+            <StackLayout VerticalOptions="End" Margin="32" Grid.Row="3">
+                <Label x:Name="LoginText" Text="If you already have an account, click here" HorizontalOptions="Center" FontFamily="CandyBeans.otf#Candy">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="LoginClicked"/>
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>
+
+        </Grid>
+        
     </ContentPage.Content>
 </ContentPage>

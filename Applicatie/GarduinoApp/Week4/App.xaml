@@ -6,6 +6,8 @@
              mc:Ignorable="d"
              x:Class="Week4.App">
     <Application.Resources>
-
+        <OnPlatform x:TypeArguments="x:String" x:Key="CandyBeans">
+            <On Platform="Android" Value="CandyBeans.otf"/>
+        </OnPlatform>
     </Application.Resources>
 </Application>

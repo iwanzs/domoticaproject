@@ -28,7 +28,7 @@ namespace Week4.Views
 
             MenuPage.BackgroundColor = Color.FromHex("A6E3F6");
 
-            Profiles currentProfile = databasemanager.GetProfileInformation();
+            Profiles currentProfile = databasemanager.GetProfileInformation(Configuration.ProfileID);
 
             ProfileName.Text = currentProfile.Name;
             ProfileName.TextColor = Color.FromHex("2670B5");

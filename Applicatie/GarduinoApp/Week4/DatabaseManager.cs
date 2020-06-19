@@ -82,9 +82,10 @@ namespace Week4
             return dbConnection.Query<Profiles>("SELECT * FROM [Profiles] WHERE UserID='" + Configuration.UserID + "'");
         }
 
-        public Profiles GetProfileInformation()
+        public Profiles GetProfileInformation(int ID)
         {
-            return dbConnection.FindWithQuery<Profiles>("SELECT * FROM [Profiles]");
+            Profiles profile = dbConnection.FindWithQuery<Profiles>("SELECT * FROM [Profiles] WHERE ID = ? ", ID);
+            return profile;
         }
     }
 }
