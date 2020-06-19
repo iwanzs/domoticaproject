@@ -59,7 +59,7 @@
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[4.6.0.772, )"
+              "version": "[4.6.0.967, )"
             },
             "sqlite-net-pcl": {
               "target": "Package",
@@ -76,7 +76,11 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+<<<<<<< Updated upstream
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+>>>>>>> Stashed changes
         }
       }
     }

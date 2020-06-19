@@ -66,6 +66,7 @@ mono_aot_mode_name:
 	.type	.L.str.7, @object
 .L.str.7:
 	.asciz	"XAMARIN_BUILD_ID"
+<<<<<<< Updated upstream
 	.size	.L.str.7, 17
 	.section	.rodata..L.str.8,"aMS",@progbits,1
 	.type	.L.str.8, @object
@@ -75,6 +76,17 @@ mono_aot_mode_name:
 	.section	.rodata..L.str.9,"aMS",@progbits,1
 	.type	.L.str.9, @object
 .L.str.9:
+=======
+	.size	.L.env.str.7, 17
+	.section	.rodata.env.str.8,"aMS",@progbits,1
+	.type	.L.env.str.8, @object
+.L.env.str.8:
+	.asciz	"0877590f-d9bf-4399-b1dc-a1d393db3377"
+	.size	.L.env.str.8, 37
+	.section	.rodata.env.str.9,"aMS",@progbits,1
+	.type	.L.env.str.9, @object
+.L.env.str.9:
+>>>>>>> Stashed changes
 	.asciz	"XA_HTTP_CLIENT_HANDLER_TYPE"
 	.size	.L.str.9, 28
 	.section	.rodata..L.str.10,"aMS",@progbits,1

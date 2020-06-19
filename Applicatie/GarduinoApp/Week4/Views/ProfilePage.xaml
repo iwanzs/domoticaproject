@@ -26,6 +26,7 @@
                                 <SwipeView.RightItems>
                                     <SwipeItems>
                                         <SwipeItem Text="Delete" BackgroundColor="LightPink" CommandParameter="{Binding}" Invoked="OnDeleteSwipeItemInvoked" />
+                                        <SwipeItem Text="Edit" BackgroundColor="LightGreen" CommandParameter="{Binding}" Invoked="OnEditSwipeItemInvoked" />
                                     </SwipeItems>
                                 </SwipeView.RightItems>
                                 <Grid Padding="10">
