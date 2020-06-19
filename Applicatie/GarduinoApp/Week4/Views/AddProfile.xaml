@@ -4,23 +4,37 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="GarduinoApp.Views.AddProfile">
+             x:Class="GarduinoApp.Views.AddProfile"
+             BackgroundImage="AddProfile.jpg">
     <ContentPage.Content>
-        <StackLayout Margin="20,35,20,20">
-            <Label Text="Create Profile" FontAttributes="Bold" FontSize="25" TextColor="Black"></Label>
-            <Label Text="Name"></Label>
-            <Entry x:Name="Name" Placeholder="What name? E.g.: Sprinkler"></Entry>
-            <Label Text="Threshold"></Label>
-            <Entry x:Name="Threshold" Placeholder="What threshold? E.g.: 10" Keyboard="Numeric"></Entry>
-            <Label Text="IP"></Label>
-            <Entry x:Name="IP" Placeholder="Which ip? E.g.: xxx,xxx,xxx,xxx"></Entry>
-            <Label Text="Port"></Label>
-            <Entry x:Name="Port" Placeholder="Which port? E.g.: 80" Keyboard="Numeric"></Entry>
-            <Label Text="ArduinoPinNumber"></Label>
-            <Entry x:Name="ArduinoPinNumber" Placeholder="Which pin? E.g.: 13" Keyboard="Numeric"></Entry>
-            <Button x:Name="CreateButton" Clicked="CreateProfile" Text="Create"></Button>
-            <Button x:Name="CancelButton" Clicked="CancelProfile" Text="Cancel"></Button>
-            <Label x:Name="Error" HorizontalOptions="Center"></Label>
-        </StackLayout>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <StackLayout Grid.Row="0" Margin="20,35,20,20" VerticalOptions="Center">
+                <Label Text="Create Profile" FontFamily="CandyBeans.otf#Candy" HorizontalOptions="Center" FontAttributes="Bold" FontSize="25" TextColor="Black"></Label>
+            </StackLayout>
+            <StackLayout Grid.Row="1" Margin="20,0,20,20" VerticalOptions="Center">
+                <Label Text="Name" FontFamily="CandyBeans.otf#Candy"></Label>
+                <Entry x:Name="Name" FontFamily="CandyBeans.otf#Candy" Placeholder="What name? E.g.: Sprinkler"></Entry>
+                <Label Text="Threshold" FontFamily="CandyBeans.otf#Candy"></Label>
+                <Entry x:Name="Threshold" FontFamily="CandyBeans.otf#Candy" Placeholder="What threshold? E.g.: 10" Keyboard="Numeric"></Entry>
+                <Label Text="IP" FontFamily="CandyBeans.otf#Candy"></Label>
+                <Entry x:Name="IP" FontFamily="CandyBeans.otf#Candy" Placeholder="Which ip? Format: xxx,xxx,xxx,xxx"/>
+                <Label Text="Port" FontFamily="CandyBeans.otf#Candy"></Label>
+                <Entry x:Name="Port" FontFamily="CandyBeans.otf#Candy" Placeholder="Which port? E.g.: 80" Keyboard="Numeric"></Entry>
+                <Label Text="ArduinoPinNumber" FontFamily="CandyBeans.otf#Candy"></Label>
+                <Entry x:Name="ArduinoPinNumber" FontFamily="CandyBeans.otf#Candy" Placeholder="Which pin? E.g.: 13" Keyboard="Numeric"></Entry>
+                <Button x:Name="CreateButton" FontFamily="CandyBeans.otf#Candy" Clicked="CreateProfile" Text="Create" BackgroundColor="Transparent" CornerRadius="20" BorderWidth="4" HeightRequest="50" WidthRequest="500" BorderColor="LightBlue"></Button>
+                <Button x:Name="CancelButton" FontFamily="CandyBeans.otf#Candy" Clicked="CancelProfile" Text="Cancel" BackgroundColor="Transparent" CornerRadius="20" BorderWidth="4" HeightRequest="50" WidthRequest="500" BorderColor="LightBlue"></Button>
+                <Label x:Name="Error" FontFamily="CandyBeans.otf#Candy" HorizontalOptions="Center"></Label>
+            </StackLayout>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

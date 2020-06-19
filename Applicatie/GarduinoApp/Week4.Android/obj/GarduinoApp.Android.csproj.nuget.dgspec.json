@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tomre\\Desktop\\GarduinoNoGit\\domoticaproject\\Applicatie\\GarduinoApp\\Week4.Android\\GarduinoApp.Android.csproj": {}
+    "C:\\Users\\tomre\\Desktop\\GitHubDomotica\\domoticaproject\\Applicatie\\GarduinoApp\\Week4.Android\\GarduinoApp.Android.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tomre\\Desktop\\GarduinoNoGit\\domoticaproject\\Applicatie\\GarduinoApp\\Week4.Android\\GarduinoApp.Android.csproj": {
+    "C:\\Users\\tomre\\Desktop\\GitHubDomotica\\domoticaproject\\Applicatie\\GarduinoApp\\Week4.Android\\GarduinoApp.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tomre\\Desktop\\GarduinoNoGit\\domoticaproject\\Applicatie\\GarduinoApp\\Week4.Android\\GarduinoApp.Android.csproj",
+        "projectUniqueName": "C:\\Users\\tomre\\Desktop\\GitHubDomotica\\domoticaproject\\Applicatie\\GarduinoApp\\Week4.Android\\GarduinoApp.Android.csproj",
         "projectName": "GarduinoApp.Android",
-        "projectPath": "C:\\Users\\tomre\\Desktop\\GarduinoNoGit\\domoticaproject\\Applicatie\\GarduinoApp\\Week4.Android\\GarduinoApp.Android.csproj",
+        "projectPath": "C:\\Users\\tomre\\Desktop\\GitHubDomotica\\domoticaproject\\Applicatie\\GarduinoApp\\Week4.Android\\GarduinoApp.Android.csproj",
         "packagesPath": "C:\\Users\\tomre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tomre\\Desktop\\GarduinoNoGit\\domoticaproject\\Applicatie\\GarduinoApp\\Week4.Android\\obj\\",
+        "outputPath": "C:\\Users\\tomre\\Desktop\\GitHubDomotica\\domoticaproject\\Applicatie\\GarduinoApp\\Week4.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -32,8 +32,8 @@
         "frameworks": {
           "monoandroid10.0": {
             "projectReferences": {
-              "C:\\Users\\tomre\\Desktop\\GarduinoNoGit\\domoticaproject\\Applicatie\\GarduinoApp\\Week4\\GarduinoApp.csproj": {
-                "projectPath": "C:\\Users\\tomre\\Desktop\\GarduinoNoGit\\domoticaproject\\Applicatie\\GarduinoApp\\Week4\\GarduinoApp.csproj"
+              "C:\\Users\\tomre\\Desktop\\GitHubDomotica\\domoticaproject\\Applicatie\\GarduinoApp\\Week4\\GarduinoApp.csproj": {
+                "projectPath": "C:\\Users\\tomre\\Desktop\\GitHubDomotica\\domoticaproject\\Applicatie\\GarduinoApp\\Week4\\GarduinoApp.csproj"
               }
             }
           }
@@ -52,20 +52,20 @@
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[4.6.0.967, )"
+              "version": "[4.7.0.968, )"
             }
           }
         }
       }
     },
-    "C:\\Users\\tomre\\Desktop\\GarduinoNoGit\\domoticaproject\\Applicatie\\GarduinoApp\\Week4\\GarduinoApp.csproj": {
+    "C:\\Users\\tomre\\Desktop\\GitHubDomotica\\domoticaproject\\Applicatie\\GarduinoApp\\Week4\\GarduinoApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tomre\\Desktop\\GarduinoNoGit\\domoticaproject\\Applicatie\\GarduinoApp\\Week4\\GarduinoApp.csproj",
+        "projectUniqueName": "C:\\Users\\tomre\\Desktop\\GitHubDomotica\\domoticaproject\\Applicatie\\GarduinoApp\\Week4\\GarduinoApp.csproj",
         "projectName": "GarduinoApp",
-        "projectPath": "C:\\Users\\tomre\\Desktop\\GarduinoNoGit\\domoticaproject\\Applicatie\\GarduinoApp\\Week4\\GarduinoApp.csproj",
+        "projectPath": "C:\\Users\\tomre\\Desktop\\GitHubDomotica\\domoticaproject\\Applicatie\\GarduinoApp\\Week4\\GarduinoApp.csproj",
         "packagesPath": "C:\\Users\\tomre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tomre\\Desktop\\GarduinoNoGit\\domoticaproject\\Applicatie\\GarduinoApp\\Week4\\obj\\",
+        "outputPath": "C:\\Users\\tomre\\Desktop\\GitHubDomotica\\domoticaproject\\Applicatie\\GarduinoApp\\Week4\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -112,7 +112,7 @@
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[4.6.0.967, )"
+              "version": "[4.7.0.968, )"
             },
             "sqlite-net-pcl": {
               "target": "Package",

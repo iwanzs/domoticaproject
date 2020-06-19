@@ -22,9 +22,7 @@ namespace Week4.Views
 
             NavigationPage.SetHasNavigationBar(this, false);
 
-            RegisterButton.BorderColor = Color.FromHex("6b4031");
-            RegisterButton.TextColor = Color.FromHex("543226");
-            LoginText.TextColor = Color.FromRgb(220, 220, 220);
+            SetColors();
 
             databasemanager = new DatabaseManager();
         }
@@ -51,6 +49,14 @@ namespace Week4.Views
                 databasemanager.AddUser(Username.Text, Password.Text);
             }
             Navigation.PushAsync(new LoginPage());
+        }
+
+        public void SetColors()
+        {
+            RegisterButton.BorderColor = Color.FromHex("6b4031");
+            RegisterButton.TextColor = Color.FromHex("543226");
+            LoginText.TextColor = Color.FromRgb(220, 220, 220);
+            Error.TextColor = Color.FromRgb(220, 220, 220);
         }
 
         private void LoginClicked(object sender, EventArgs e)

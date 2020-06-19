@@ -57,8 +57,14 @@ namespace Week4.Views
                 Navigation.PushModalAsync(new NavigationPage(new ProfilePage()));
             }
 
+
             Detail = new NavigationPage((Page)Activator.CreateInstance(page));
             IsPresented = false;
+        }
+
+        protected override void OnAppearing()
+        {
+            NavigationDrawerList.SelectedItem = null;
         }
     }
 }

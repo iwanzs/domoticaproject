@@ -939,7 +939,7 @@
           "lib/monoandroid10.0/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/4.6.0.967": {
+      "Xamarin.Forms/4.7.0.968": {
         "type": "package",
         "dependencies": {
           "Xamarin.AndroidX.Browser": "1.0.0.1",
@@ -998,7 +998,7 @@
         "dependencies": {
           "Newtonsoft.Json": "12.0.3",
           "Xamarin.Essentials": "1.5.3.2",
-          "Xamarin.Forms": "4.6.0.967",
+          "Xamarin.Forms": "4.7.0.968",
           "sqlite-net-pcl": "1.7.335"
         },
         "compile": {
@@ -1968,13 +1968,14 @@
         "xamarin.essentials.nuspec"
       ]
     },
-    "Xamarin.Forms/4.6.0.967": {
-      "sha512": "t+ONiIyl1J2ISXkTvuexIRxsxUxOUUsqlP94ZLyuSatq5zHpEBFYECppJRHwRw40emUt3CgDdHFq80WS0jRMJQ==",
+    "Xamarin.Forms/4.7.0.968": {
+      "sha512": "VvHI/VXyDZcCLYXywh9A8gVtldD8XCLR8hujZVdlKGh87HIXAUW0b+uLFsvyMB8COwNce0w56ycgD/tXtLgFRA==",
       "type": "package",
-      "path": "xamarin.forms/4.6.0.967",
+      "path": "xamarin.forms/4.7.0.968",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "Assets/xamarin_128x128.png",
         "build/MonoAndroid10/proguard.cfg",
         "build/XCODE10/Xamarin.Forms.Platform.iOS.dll",
         "build/XCODE10/Xamarin.Forms.Platform.iOS.pdb",
@@ -2277,7 +2278,7 @@
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.dll",
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.pdb",
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.xml",
-        "xamarin.forms.4.6.0.967.nupkg.sha512",
+        "xamarin.forms.4.7.0.968.nupkg.sha512",
         "xamarin.forms.nuspec"
       ]
     },
@@ -2310,7 +2311,7 @@
       "GarduinoApp >= 1.0.0",
       "Newtonsoft.Json >= 12.0.3",
       "Xamarin.Essentials >= 1.5.3.2",
-      "Xamarin.Forms >= 4.6.0.967"
+      "Xamarin.Forms >= 4.7.0.968"
     ]
   },
   "packageFolders": {
@@ -2320,11 +2321,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tomre\\Desktop\\GarduinoNoGit\\domoticaproject\\Applicatie\\GarduinoApp\\Week4.Android\\GarduinoApp.Android.csproj",
+      "projectUniqueName": "C:\\Users\\tomre\\Desktop\\GitHubDomotica\\domoticaproject\\Applicatie\\GarduinoApp\\Week4.Android\\GarduinoApp.Android.csproj",
       "projectName": "GarduinoApp.Android",
-      "projectPath": "C:\\Users\\tomre\\Desktop\\GarduinoNoGit\\domoticaproject\\Applicatie\\GarduinoApp\\Week4.Android\\GarduinoApp.Android.csproj",
+      "projectPath": "C:\\Users\\tomre\\Desktop\\GitHubDomotica\\domoticaproject\\Applicatie\\GarduinoApp\\Week4.Android\\GarduinoApp.Android.csproj",
       "packagesPath": "C:\\Users\\tomre\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tomre\\Desktop\\GarduinoNoGit\\domoticaproject\\Applicatie\\GarduinoApp\\Week4.Android\\obj\\",
+      "outputPath": "C:\\Users\\tomre\\Desktop\\GitHubDomotica\\domoticaproject\\Applicatie\\GarduinoApp\\Week4.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -2345,8 +2346,8 @@
       "frameworks": {
         "monoandroid10.0": {
           "projectReferences": {
-            "C:\\Users\\tomre\\Desktop\\GarduinoNoGit\\domoticaproject\\Applicatie\\GarduinoApp\\Week4\\GarduinoApp.csproj": {
-              "projectPath": "C:\\Users\\tomre\\Desktop\\GarduinoNoGit\\domoticaproject\\Applicatie\\GarduinoApp\\Week4\\GarduinoApp.csproj"
+            "C:\\Users\\tomre\\Desktop\\GitHubDomotica\\domoticaproject\\Applicatie\\GarduinoApp\\Week4\\GarduinoApp.csproj": {
+              "projectPath": "C:\\Users\\tomre\\Desktop\\GitHubDomotica\\domoticaproject\\Applicatie\\GarduinoApp\\Week4\\GarduinoApp.csproj"
             }
           }
         }
@@ -2365,7 +2366,7 @@
           },
           "Xamarin.Forms": {
             "target": "Package",
-            "version": "[4.6.0.967, )"
+            "version": "[4.7.0.968, )"
           }
         }
       }

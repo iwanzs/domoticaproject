@@ -24,6 +24,7 @@ namespace GarduinoApp.Views
             InitializeComponent();
 
             NavigationPage.SetHasBackButton(this, false);
+            NavigationPage.SetHasNavigationBar(this, false);
 
             databasemanager = new DatabaseManager();
         }

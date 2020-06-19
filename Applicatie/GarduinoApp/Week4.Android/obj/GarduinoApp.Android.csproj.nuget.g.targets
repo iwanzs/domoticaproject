@@ -46,6 +46,6 @@
     <Import Project="$(NuGetPackageRoot)xamarin.androidx.lifecycle.livedata\2.1.0.1\buildTransitive\monoandroid90\Xamarin.AndroidX.Lifecycle.LiveData.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.androidx.lifecycle.livedata\2.1.0.1\buildTransitive\monoandroid90\Xamarin.AndroidX.Lifecycle.LiveData.targets')" />
     <Import Project="$(NuGetPackageRoot)xamarin.androidx.legacy.support.v4\1.0.0.1\buildTransitive\monoandroid90\Xamarin.AndroidX.Legacy.Support.V4.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.androidx.legacy.support.v4\1.0.0.1\buildTransitive\monoandroid90\Xamarin.AndroidX.Legacy.Support.V4.targets')" />
     <Import Project="$(NuGetPackageRoot)xamarin.androidx.browser\1.0.0.1\buildTransitive\monoandroid90\Xamarin.AndroidX.Browser.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.androidx.browser\1.0.0.1\buildTransitive\monoandroid90\Xamarin.AndroidX.Browser.targets')" />
-    <Import Project="$(NuGetPackageRoot)xamarin.forms\4.6.0.967\buildTransitive\Xamarin.Forms.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.forms\4.6.0.967\buildTransitive\Xamarin.Forms.targets')" />
+    <Import Project="$(NuGetPackageRoot)xamarin.forms\4.7.0.968\buildTransitive\Xamarin.Forms.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.forms\4.7.0.968\buildTransitive\Xamarin.Forms.targets')" />
   </ImportGroup>
 </Project>

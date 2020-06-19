@@ -12,7 +12,7 @@
           "NETStandard.Library": "2.0.3",
           "Newtonsoft.Json": "12.0.3",
           "Xamarin.Essentials": "1.5.3.2",
-          "Xamarin.Forms": "4.6.0.967",
+          "Xamarin.Forms": "4.7.0.968",
           "sqlite-net-pcl": "1.7.335"
         },
         "runtime": {
@@ -128,19 +128,19 @@
           }
         }
       },
-      "Xamarin.Forms/4.6.0.967": {
+      "Xamarin.Forms/4.7.0.968": {
         "runtime": {
           "lib/netstandard2.0/Xamarin.Forms.Core.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "4.6.0.526"
+            "fileVersion": "4.7.0.385"
           },
           "lib/netstandard2.0/Xamarin.Forms.Platform.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "4.6.0.526"
+            "fileVersion": "4.7.0.385"
           },
           "lib/netstandard2.0/Xamarin.Forms.Xaml.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "4.6.0.526"
+            "fileVersion": "4.7.0.385"
           }
         }
       }
@@ -243,12 +243,12 @@
       "path": "xamarin.essentials/1.5.3.2",
       "hashPath": "xamarin.essentials.1.5.3.2.nupkg.sha512"
     },
-    "Xamarin.Forms/4.6.0.967": {
+    "Xamarin.Forms/4.7.0.968": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-t+ONiIyl1J2ISXkTvuexIRxsxUxOUUsqlP94ZLyuSatq5zHpEBFYECppJRHwRw40emUt3CgDdHFq80WS0jRMJQ==",
-      "path": "xamarin.forms/4.6.0.967",
-      "hashPath": "xamarin.forms.4.6.0.967.nupkg.sha512"
+      "sha512": "sha512-VvHI/VXyDZcCLYXywh9A8gVtldD8XCLR8hujZVdlKGh87HIXAUW0b+uLFsvyMB8COwNce0w56ycgD/tXtLgFRA==",
+      "path": "xamarin.forms/4.7.0.968",
+      "hashPath": "xamarin.forms.4.7.0.968.nupkg.sha512"
     }
   }
 }

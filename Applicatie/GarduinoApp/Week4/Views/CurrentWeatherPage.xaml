@@ -41,20 +41,23 @@
                 <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
 
-            <Label Text="Search by City" 
+            <Label Text="Search by City"
+                   FontFamily="CandyBeans.otf#Candy"
                    Grid.ColumnSpan="3"
                    HorizontalOptions="Center"
                    TextColor="White" 
                    FontAttributes="Bold" 
                    FontSize="Medium" />
 
-            <Label Text="City:" 
+            <Label Text="City:"
+                   FontFamily="CandyBeans.otf#Candy"
                    Grid.Row="1" 
                    VerticalOptions="Center"
                    Style="{StaticResource labelStyle}"
                    TextColor="#C0C0C0" />
 
             <Entry x:Name="_cityEntry"
+                   FontFamily="CandyBeans.otf#Candy"
                    Grid.Row="1" 
                    Grid.Column="1"
                    Margin="5,0"
@@ -64,6 +67,7 @@
                    Placeholder="Enter your City here"  />
 
             <Button Grid.Row="1" 
+                    FontFamily="CandyBeans.otf#Candy"
                     Grid.Column="2"
                     Text="Get Weather" 
                     BorderWidth="1"
@@ -76,38 +80,38 @@
         <ScrollView>
             <StackLayout Padding="10">
                 <Label Text="Location" 
+                       FontFamily="CandyBeans.otf#Candy"
                        Style="{StaticResource labelStyle}" />
                 <Label Text="{Binding Title}" 
+                       FontFamily="CandyBeans.otf#Candy"
                        Style="{StaticResource labelResultStyle}" />
 
                 <Label Text="Temperature (Degrees Fahrenheit)" 
+                       FontFamily="CandyBeans.otf#Candy"
                        Style="{StaticResource labelStyle}" />
                 <Label Text="{Binding Main.Temperature}" 
+                       FontFamily="CandyBeans.otf#Candy"
                        Style="{StaticResource labelResultStyle}" />
 
                 <Label Text="Wind Speed (Meter/Second)" 
+                       FontFamily="CandyBeans.otf#Candy"
                        Style="{StaticResource labelStyle}" />
-                <Label Text="{Binding Wind.Speed}" 
+                <Label Text="{Binding Wind.Speed}"
+                       FontFamily="CandyBeans.otf#Candy"
                        Style="{StaticResource labelResultStyle}" />
 
                 <Label Text="Humidity (Percentage %)" 
+                       FontFamily="CandyBeans.otf#Candy"
                        Style="{StaticResource labelStyle}" />
                 <Label Text="{Binding Main.Humidity}" 
+                       FontFamily="CandyBeans.otf#Candy"
                        Style="{StaticResource labelResultStyle}" />
 
                 <Label Text="Visibility" 
+                       FontFamily="CandyBeans.otf#Candy"
                        Style="{StaticResource labelStyle}" />
                 <Label Text="{Binding Weather[0].Visibility}" 
-                       Style="{StaticResource labelResultStyle}" />
-
-                <Label Text="Time of Sunrise (American Date Notation)" 
-                       Style="{StaticResource labelStyle}" />
-                <Label Text="{Binding Sys.Sunrise, Converter={StaticResource longToDateTimeConverter}}" 
-                       Style="{StaticResource labelResultStyle}" />
-
-                <Label Text="Time of Sunset (American Date Notation)" 
-                       Style="{StaticResource labelStyle}" />
-                <Label Text="{Binding Sys.Sunset, Converter={StaticResource longToDateTimeConverter}}" 
+                       FontFamily="CandyBeans.otf#Candy"
                        Style="{StaticResource labelResultStyle}" />
             </StackLayout>
         </ScrollView>

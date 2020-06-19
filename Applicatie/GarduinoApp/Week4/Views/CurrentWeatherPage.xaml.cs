@@ -43,5 +43,10 @@ namespace GarduinoApp.Views
             requestUri += $"&APPID={Configuration.OpenWeatherMapAPIKey}";
             return requestUri;
         }
+
+        protected override void OnAppearing()
+        {
+            //GenerateRequestUri()
+        }
     }
 }

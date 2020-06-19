@@ -25,6 +25,7 @@ namespace GarduinoApp.Views
 
             databasemanager = new DatabaseManager();
 
+            NavigationPage.SetHasNavigationBar(this, false);
             NavigationPage.SetHasBackButton(this, false);
 
             GetProfiles();
@@ -64,6 +65,7 @@ namespace GarduinoApp.Views
             var item = (SwipeItem)sender;
             var param = (Profiles)item.CommandParameter;
             databasemanager.GetProfileInformation(param.ID);
+            Configuration.ProfileID = param.ID;
             Navigation.PushAsync(new EditProfile());
         }
     }

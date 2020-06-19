@@ -4,7 +4,8 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="GarduinoApp.Views.ProfilePage">
+             x:Class="GarduinoApp.Views.ProfilePage"
+             BackgroundImage="Profile.jpg">
     <ContentPage.Content>
         <StackLayout Margin="20,35,20,20">
             <Grid>
@@ -15,14 +16,14 @@
                     <ColumnDefinition Width="*"></ColumnDefinition>
                     <ColumnDefinition Width="*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                <Label Text="Profiles" FontAttributes="Bold" FontSize="25" TextColor="Black" HorizontalOptions="Start" VerticalOptions="Center" Grid.Row="0" Grid.Column="0"/>
-                <Button Text="+" FontSize="25" HeightRequest="45" WidthRequest="45" FontAttributes="Bold" TextColor="Black" HorizontalOptions="End" VerticalOptions="Center" Grid.Row="0" Grid.Column="1" Clicked="AddProfile"/>
+                <Label Text="Profiles" FontFamily="CandyBeans.otf#Candy" FontAttributes="Bold" FontSize="25" TextColor="White" HorizontalOptions="Start" VerticalOptions="Center" Grid.Row="0" Grid.Column="0"/>
+                <Button Text="+ Add" x:Name="AddButton" FontFamily="CandyBeans.otf#Candy" FontSize="25" FontAttributes="Bold" TextColor="White" HorizontalOptions="End" VerticalOptions="Center" Grid.Row="0" BackgroundColor="Transparent" Grid.Column="1" Clicked="AddProfile" />
             </Grid>
             <ListView x:Name="ProfilesList" HasUnevenRows="True" ItemTapped="SelectProfile">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <SwipeView>
+                            <SwipeView BackgroundColor="Transparent">
                                 <SwipeView.RightItems>
                                     <SwipeItems>
                                         <SwipeItem Text="Delete" BackgroundColor="LightPink" CommandParameter="{Binding}" Invoked="OnDeleteSwipeItemInvoked" />
@@ -38,14 +39,14 @@
                                     <ColumnDefinition Width="Auto" />
                                     <ColumnDefinition Width="*" />
                                 </Grid.ColumnDefinitions>
-                                <Image Grid.RowSpan="2" 
-                                   BackgroundColor="LightBlue"
+                                <Image Grid.RowSpan="1" 
+                                   BackgroundColor="LightPink"
                                    Aspect="AspectFill"
                                    HeightRequest="60"
                                    WidthRequest="60" />
-                                <Label x:Name="FirstChar" Text="{Binding FirstLetter}" FontSize="20" Grid.RowSpan="2" HorizontalOptions="Center" VerticalOptions="Center"></Label>
-                                <Label Grid.Column="1" Text="{Binding Name}" FontAttributes="Bold" />
-                                <Label Grid.Row="1" Grid.Column="1" Text="{Binding IP}" VerticalOptions="End" />
+                                    <Label x:Name="FirstChar" TextColor="Black" FontFamily="CandyBeans.otf#Candy" Text="{Binding FirstLetter}" FontSize="20" Grid.RowSpan="1" HorizontalOptions="Center" VerticalOptions="Center"></Label>
+                                    <Label Grid.Column="1" TextColor="White" FontFamily="CandyBeans.otf#Candy" Text="{Binding Name}" FontAttributes="Bold" />
+                                    <Label FontFamily="CandyBeans.otf#Candy" TextColor="White" Grid.Column="1" Text="{Binding IP}" VerticalOptions="End" />
                             </Grid>
                             </SwipeView>
                         </ViewCell>

@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:GarduinoApp;assembly=GarduinoApp"
              mc:Ignorable="d"
              x:Class="Week4.Views.LoginPage"
-             BackgroundImage="gardenbg5.jpg"
+             BackgroundImage="Login.jpg"
              >
     <ContentPage.Content>
         <Grid>
