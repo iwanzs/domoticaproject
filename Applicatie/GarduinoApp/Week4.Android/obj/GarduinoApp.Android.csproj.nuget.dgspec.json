@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tomre\\Desktop\\GitHubDomotica\\domoticaproject\\Applicatie\\GarduinoApp\\Week4.Android\\GarduinoApp.Android.csproj": {}
+    "C:\\Users\\Iwan\\Documents\\GitHub\\domoticaproject\\Applicatie\\GarduinoApp\\Week4.Android\\GarduinoApp.Android.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tomre\\Desktop\\GitHubDomotica\\domoticaproject\\Applicatie\\GarduinoApp\\Week4.Android\\GarduinoApp.Android.csproj": {
+    "C:\\Users\\Iwan\\Documents\\GitHub\\domoticaproject\\Applicatie\\GarduinoApp\\Week4.Android\\GarduinoApp.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tomre\\Desktop\\GitHubDomotica\\domoticaproject\\Applicatie\\GarduinoApp\\Week4.Android\\GarduinoApp.Android.csproj",
+        "projectUniqueName": "C:\\Users\\Iwan\\Documents\\GitHub\\domoticaproject\\Applicatie\\GarduinoApp\\Week4.Android\\GarduinoApp.Android.csproj",
         "projectName": "GarduinoApp.Android",
-        "projectPath": "C:\\Users\\tomre\\Desktop\\GitHubDomotica\\domoticaproject\\Applicatie\\GarduinoApp\\Week4.Android\\GarduinoApp.Android.csproj",
-        "packagesPath": "C:\\Users\\tomre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tomre\\Desktop\\GitHubDomotica\\domoticaproject\\Applicatie\\GarduinoApp\\Week4.Android\\obj\\",
+        "projectPath": "C:\\Users\\Iwan\\Documents\\GitHub\\domoticaproject\\Applicatie\\GarduinoApp\\Week4.Android\\GarduinoApp.Android.csproj",
+        "packagesPath": "C:\\Users\\Iwan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Iwan\\Documents\\GitHub\\domoticaproject\\Applicatie\\GarduinoApp\\Week4.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\tomre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Iwan\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -32,8 +32,8 @@
         "frameworks": {
           "monoandroid10.0": {
             "projectReferences": {
-              "C:\\Users\\tomre\\Desktop\\GitHubDomotica\\domoticaproject\\Applicatie\\GarduinoApp\\Week4\\GarduinoApp.csproj": {
-                "projectPath": "C:\\Users\\tomre\\Desktop\\GitHubDomotica\\domoticaproject\\Applicatie\\GarduinoApp\\Week4\\GarduinoApp.csproj"
+              "C:\\Users\\Iwan\\Documents\\GitHub\\domoticaproject\\Applicatie\\GarduinoApp\\Week4\\GarduinoApp.csproj": {
+                "projectPath": "C:\\Users\\Iwan\\Documents\\GitHub\\domoticaproject\\Applicatie\\GarduinoApp\\Week4\\GarduinoApp.csproj"
               }
             }
           }
@@ -54,20 +54,20 @@
         }
       }
     },
-    "C:\\Users\\tomre\\Desktop\\GitHubDomotica\\domoticaproject\\Applicatie\\GarduinoApp\\Week4\\GarduinoApp.csproj": {
+    "C:\\Users\\Iwan\\Documents\\GitHub\\domoticaproject\\Applicatie\\GarduinoApp\\Week4\\GarduinoApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tomre\\Desktop\\GitHubDomotica\\domoticaproject\\Applicatie\\GarduinoApp\\Week4\\GarduinoApp.csproj",
+        "projectUniqueName": "C:\\Users\\Iwan\\Documents\\GitHub\\domoticaproject\\Applicatie\\GarduinoApp\\Week4\\GarduinoApp.csproj",
         "projectName": "GarduinoApp",
-        "projectPath": "C:\\Users\\tomre\\Desktop\\GitHubDomotica\\domoticaproject\\Applicatie\\GarduinoApp\\Week4\\GarduinoApp.csproj",
-        "packagesPath": "C:\\Users\\tomre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tomre\\Desktop\\GitHubDomotica\\domoticaproject\\Applicatie\\GarduinoApp\\Week4\\obj\\",
+        "projectPath": "C:\\Users\\Iwan\\Documents\\GitHub\\domoticaproject\\Applicatie\\GarduinoApp\\Week4\\GarduinoApp.csproj",
+        "packagesPath": "C:\\Users\\Iwan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Iwan\\Documents\\GitHub\\domoticaproject\\Applicatie\\GarduinoApp\\Week4\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\tomre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Iwan\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -121,7 +121,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
