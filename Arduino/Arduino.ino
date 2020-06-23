@@ -1,50 +1,28 @@
-// Arduino Domotica server with Klik-Aan-Klik-Uit-controller 
-//
-// By Sibbele Oosterhaven, Computer Science NHL, Leeuwarden
-// V1.2, 16/12/2016, published on BB. Works with Xamarin (App: Domotica)
-//
-// Hardware: Arduino Uno, Ethernet shield W5100; RF transmitter on RFpin; debug LED for serverconnection on ledPin
-// The Ethernet shield uses pin 10, 11, 12 and 13
-// Use Ethernet2.h libary with the (new) Ethernet board, model 2
-// IP address of server is based on DHCP. No fallback to static IP; use a wireless router
-// Arduino server and smartphone should be in the same network segment (192.168.1.x)
-// 
-// Supported kaku-devices
-// https://eeo.tweakblogs.net/blog/11058/action-klik-aan-klik-uit-modulen (model left)
-// kaku Action device, old model (with dipswitches); system code = 31, device = 'A' 
-// system code = 31, device = 'A' true/false
-// system code = 31, device = 'B' true/false
-//
-// // https://eeo.tweakblogs.net/blog/11058/action-klik-aan-klik-uit-modulen (model right)
-// Based on https://github.com/evothings/evothings-examples/blob/master/resources/arduino/arduinoethernet/arduinoethernet.ino.
-// kaku, Action, new model, codes based on Arduino -> Voorbeelden -> RCsw-2-> ReceiveDemo_Simple
-//   on      off       
-// 1 2210415 2210414   replace with your own codes
-// 2 2210413 2210412
-// 3 2210411 2210410
-// 4 2210407 2210406
-//
-// https://github.com/hjgode/homewatch/blob/master/arduino/libraries/NewRemoteSwitch/README.TXT
-// kaku, Gamma, APA3, codes based on Arduino -> Voorbeelden -> NewRemoteSwitch -> ShowReceivedCode
-// 1 Addr 21177114 unit 0 on/off, period: 270us   replace with your own code
-// 2 Addr 21177114 unit 1 on/off, period: 270us
-// 3 Addr 21177114 unit 2 on/off, period: 270us
-
 // Supported KaKu devices -> find, download en install corresponding libraries
-#define unitCodeApa3      21177114  // replace with your own code
-#define unitCodeActionOld 31        // replace with your own code
-#define unitCodeActionNew 2210406   // replace with your own code
+#define unitCodeApa3      60753714   // replace with your own code
+#define unitCodeActionOld 15        // replace with your own code
+#define unitCodeActionNew 60753714    // replace with your own code
 
 // Include files.
 #include <SPI.h>                  // Ethernet shield uses SPI-interface
 #include <Ethernet.h>             // Ethernet library (use Ethernet2.h for new ethernet shield v2)
 #include <NewRemoteTransmitter.h> // Remote Control, Gamma, APA3
+#include <NewRemoteReceiver.h>
 #include <RemoteTransmitter.h>    // Remote Control, Action, old model
-//#include <RCSwitch.h>           // Remote Control, Action, new model
+#include <RCSwitch.h>           // Remote Control, Action, new model
+#include <ArduinoJson.h> 
 
 // Set Ethernet Shield MAC address  (check yours)
 byte mac[] = { 0x40, 0x6c, 0x8f, 0x36, 0x84, 0x8a }; // Ethernet adapter shield S. Oosterhaven
 int ethPort = 3300;                                  // Take a free port (check your router)
+char serverAdress[] = "api.openweathermap.org";    // name address for Google (using DNS)
+int currentValue = 0;
+
+EthernetClient client;
+
+String apiKey= "bb369822394023a11017c9be8719d8cf"; 
+char weatherMapAPI[] = "api.openweathermap.org"; 
+String location= "torino,IT"; 
 
 #define RFPin        3  // output, pin to control the RF-sender (and Click-On Click-Off-device)
 #define lowPin       5  // output, always LOW
@@ -55,8 +33,11 @@ int ethPort = 3300;                                  // Take a free port (check 
 #define analogPin    0  // sensor value
 
 EthernetServer server(ethPort);              // EthernetServer instance (listening on port <ethPort>).
-NewRemoteTransmitter apa3Transmitter(unitCodeApa3, RFPin, 260, 3);  // APA3 (Gamma) remote, use pin <RFPin> 
-ActionTransmitter actionTransmitter(RFPin);  // Remote Control, Action, old model (Impulse), use pin <RFPin>
+
+NewRemoteTransmitter apa3Transmitter(unitCodeApa3, RFPin, 256);  // APA3 (Gamma) remote, use pin <RFPin> 
+bool isOn = NewRemoteCode::on;
+bool isOff = NewRemoteCode::off;
+//ActionTransmitter actionTransmitter(RFPin);  // Remote Control, Action, old model (Impulse), use pin <RFPin>
 //RCSwitch mySwitch = RCSwitch();            // Remote Control, Action, new model (on-off), use pin <RFPin>
 
 char actionDevice = 'A';                 // Variable to store Action Device id ('A', 'B', 'C')
@@ -64,12 +45,18 @@ bool pinState = false;                   // Variable to store actual pin state
 bool pinChange = false;                  // Variable to store actual pin change
 int  sensorValue = 0;                    // Variable to store actual sensor value
 
+
+// Initialize the Ethernet client library
+// with the IP address and port of the server
+// that you want to connect to (port 80 is default for HTTP):
+
+
 void setup()
 {
    Serial.begin(9600);
    //while (!Serial) { ; }               // Wait for serial port to connect. Needed for Leonardo only.
 
-   Serial.println("Domotica project, Arduino Domotica Server\n");
+//   Serial.println("Domotica project, Arduino Domotica Server\n");
    
    //Init I/O-pins
    pinMode(switchPin, INPUT);            // hardware switch, for changing pin state
@@ -90,38 +77,39 @@ void setup()
    //Try to get an IP address from the DHCP server.
    if (Ethernet.begin(mac) == 0)
    {
-      Serial.println("Could not obtain IP-address from DHCP -> do nothing");
+//      Serial.println("Could not obtain IP-address from DHCP -> do nothing");
       while (true){     // no point in carrying on, so do nothing forevermore; check your router
       }
    }
    
-   Serial.print("LED (for connect-state and pin-state) on pin "); Serial.println(ledPin);
-   Serial.print("Input switch on pin "); Serial.println(switchPin);
-   Serial.println("Ethernetboard connected (pins 10, 11, 12, 13 and SPI)");
-   Serial.println("Connect to DHCP source in local network (blinking led -> waiting for connection)");
+//   Serial.print("LED (for connect-state and pin-state) on pin "); Serial.println(ledPin);
+//   Serial.print("Input switch on pin "); Serial.println(switchPin);
+//   Serial.println("Ethernetboard connected (pins 10, 11, 12, 13 and SPI)");
+//   Serial.println("Connect to DHCP source in local network (blinking led -> waiting for connection)");
    
    //Start the ethernet server.
    server.begin();
 
    // Print IP-address and led indication of server state
-   Serial.print("Listening address: ");
-   Serial.print(Ethernet.localIP());
+//   Serial.print("Listening address: ");
+   Serial.println(Ethernet.localIP());
    
    // for hardware debug: LED indication of server state: blinking = waiting for connection
    int IPnr = getIPComputerNumber(Ethernet.localIP());   // Get computernumber in local network 192.168.1.3 -> 3)
-   Serial.print(" ["); Serial.print(IPnr); Serial.print("] "); 
-   Serial.print("  [Testcase: telnet "); Serial.print(Ethernet.localIP()); Serial.print(" "); Serial.print(ethPort); Serial.println("]");
+//   Serial.print(" ["); Serial.print(IPnr); Serial.print("] "); 
+//   Serial.print("  [Testcase: telnet "); Serial.print(Ethernet.localIP()); Serial.print(" "); Serial.print(ethPort); Serial.println("]");
    signalNumber(ledPin, IPnr);
 }
 
 void loop()
-{
+{ 
    // Listen for incomming connection (app)
    EthernetClient ethernetClient = server.available();
    if (!ethernetClient) {
       blink(ledPin);
       return; // wait for connection and blink LED
    }
+
 
    Serial.println("Application connected");
    digitalWrite(ledPin, LOW);
@@ -131,7 +119,7 @@ void loop()
    {
       checkEvent(switchPin, pinState);          // update pin state
       sensorValue = readSensor(0, 100);         // update sensor value
-        
+
       // Activate pin based op pinState
       if (pinChange) {
          if (pinState) { digitalWrite(ledPin, HIGH); switchDefault(true); }
@@ -150,31 +138,69 @@ void loop()
    Serial.println("Application disonnected");
 }
 
+int getWeather() { 
+// Serial.println("\nStarting connection to server...");  // if you get a connection, report back via serial: 
+ if (client.connect(serverAdress, 80)) { 
+   Serial.println("connected to server"); 
+   // Make a HTTP request: 
+   client.print("GET /data/2.5/weather?"); 
+   client.print("q="+location); 
+   client.print("&appid="+apiKey); 
+   client.println("&units=metric"); 
+   client.println("Host: api.openweathermap.org"); 
+   client.println("Connection: close"); 
+   client.println(); 
+ } else { 
+   Serial.println("unable to connect"); 
+ } 
+
+ while (client.connected()) { 
+   String line = client.readStringUntil('\n'); 
+//   Serial.println(line); 
+   
+   //create a json buffer where to store the json data 
+  StaticJsonDocument<475> doc;
+  Serial.println(doc.capacity());
+ 
+   deserializeJson(doc, line); 
+
+  int main_temp = doc["main"]["temp"]; // 25.95
+  return main_temp;
+ } 
+} 
+
 // Choose and switch your Kaku device, state is true/false (HIGH/LOW)
 void switchDefault(bool state)
 {   
-   apa3Transmitter.sendUnit(0, state);          // APA3 Kaku (Gamma)                
+  if(state == true){
+   apa3Transmitter.sendUnit(15, isOn);          // APA3 Kaku (Gamma)                
    delay(100);
-   actionTransmitter.sendSignal(unitCodeActionOld, actionDevice, state);  // Action Kaku, old model
-   delay(100);
+  }
+  else{
+    apa3Transmitter.sendUnit(15, isOff);     
+    delay(100); 
+  }
+     delay(100);
+  }
+//   actionTransmitter.sendSignal(unitCodeActionOld, actionDevice, state);  // Action Kaku, old model
    //mySwitch.send(2210410 + state, 24);  // tricky, false = 0, true = 1  // Action Kaku, new model
    //delay(100);
-}
+
 
 // Implementation of (simple) protocol between app and Arduino
 // Request (from app) is single char ('a', 's', 't', 'i' etc.)
 // Response (to app) is 4 chars  (not all commands demand a response)
 void executeCommand(char cmd)
-{     
+{            
          char buf[4] = {'\0', '\0', '\0', '\0'};
 
          // Command protocol
          Serial.print("["); Serial.print(cmd); Serial.print("] -> ");
          switch (cmd) {
-         case 'a': // Report sensor value to the app  
+         case 'a': // Report sensor value to the app          
             intToCharBuf(sensorValue, buf, 4);                // convert to charbuffer
             server.write(buf, 4);                             // response is always 4 chars (\n included)
-            Serial.print("Sensor: "); Serial.println(buf);
+//            Serial.print("Sensor: "); Serial.println(buf);
             break;
          case 's': // Report switch state to the app
             if (pinState) { server.write(" ON\n"); Serial.println("Pin state is ON"); }  // always send 4 chars
@@ -187,6 +213,14 @@ void executeCommand(char cmd)
             break;
          case 'i':    
             digitalWrite(infoPin, HIGH);
+            break;
+         case 'w':
+            currentValue = getWeather();
+            Serial.println(currentValue);    
+            intToCharBuf(currentValue, buf, 4);                // convert to charbuffer
+            server.write(buf, 4);                             // response is always 4 chars (\n included)
+            Serial.print("Het weer: "); Serial.println(buf);
+            currentValue = "";
             break;
          default:
             digitalWrite(infoPin, LOW);
