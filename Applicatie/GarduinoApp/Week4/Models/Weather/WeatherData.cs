@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using System;
 
 namespace GarduinoApp.Models.Weather
 {
@@ -64,19 +65,21 @@ namespace GarduinoApp.Models.Weather
     public class Main
     {
         [JsonProperty("temp")]
-        public double Temperature { get; set; }
+        public string Temperature { get; set; }
 
         [JsonProperty("pressure")]
-        public long Pressure { get; set; }
+        public string Pressure { get; set; }
 
         [JsonProperty("humidity")]
-        public long Humidity { get; set; }
+        public string Humidity { get; set; }
 
         [JsonProperty("temp_min")]
         public double TempMin { get; set; }
 
         [JsonProperty("temp_max")]
         public double TempMax { get; set; }
+
+        public DateTime dateTime { get; set; }
     }
 
     public class Sys
@@ -118,7 +121,7 @@ namespace GarduinoApp.Models.Weather
     public class Wind
     {
         [JsonProperty("speed")]
-        public double Speed { get; set; }
+        public string Speed { get; set; }
 
         [JsonProperty("deg")]
         public long Deg { get; set; }

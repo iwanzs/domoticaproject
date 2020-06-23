@@ -1,0 +1,38 @@
+C:\appsprogram\Week4\Week4\bin\Debug\netstandard2.0\Week4.deps.json
+C:\appsprogram\Week4\Week4\bin\Debug\netstandard2.0\Week4.dll
+C:\appsprogram\Week4\Week4\bin\Debug\netstandard2.0\ref\Week4.dll
+C:\appsprogram\Week4\Week4\bin\Debug\netstandard2.0\Week4.pdb
+C:\appsprogram\Week4\Week4\obj\Debug\netstandard2.0\Week4.csprojAssemblyReference.cache
+C:\appsprogram\Week4\Week4\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\appsprogram\Week4\Week4\obj\Debug\netstandard2.0\Views\AddPage.xaml.g.cs
+C:\appsprogram\Week4\Week4\obj\Debug\netstandard2.0\Views\FavoritePage.xaml.g.cs
+C:\appsprogram\Week4\Week4\obj\Debug\netstandard2.0\Views\LoginPage.xaml.g.cs
+C:\appsprogram\Week4\Week4\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
+C:\appsprogram\Week4\Week4\obj\Debug\netstandard2.0\Views\MasterPage.xaml.g.cs
+C:\appsprogram\Week4\Week4\obj\Debug\netstandard2.0\Views\RegisterPage.xaml.g.cs
+C:\appsprogram\Week4\Week4\obj\Debug\netstandard2.0\Week4.csproj.CoreCompileInputs.cache
+C:\appsprogram\Week4\Week4\obj\Debug\netstandard2.0\Week4.AssemblyInfoInputs.cache
+C:\appsprogram\Week4\Week4\obj\Debug\netstandard2.0\Week4.AssemblyInfo.cs
+C:\appsprogram\Week4\Week4\obj\Debug\netstandard2.0\XamlC.stamp
+C:\appsprogram\Week4\Week4\obj\Debug\netstandard2.0\Week4.dll
+C:\appsprogram\Week4\Week4\obj\Debug\netstandard2.0\ref\Week4.dll
+C:\appsprogram\Week4\Week4\obj\Debug\netstandard2.0\Week4.pdb
+E:\Coding\Huiswerk\Apps Programmeren\Week 4\Week4\Week4\bin\Debug\netstandard2.0\Week4.deps.json
+E:\Coding\Huiswerk\Apps Programmeren\Week 4\Week4\Week4\bin\Debug\netstandard2.0\Week4.dll
+E:\Coding\Huiswerk\Apps Programmeren\Week 4\Week4\Week4\bin\Debug\netstandard2.0\ref\Week4.dll
+E:\Coding\Huiswerk\Apps Programmeren\Week 4\Week4\Week4\bin\Debug\netstandard2.0\Week4.pdb
+E:\Coding\Huiswerk\Apps Programmeren\Week 4\Week4\Week4\obj\Debug\netstandard2.0\App.xaml.g.cs
+E:\Coding\Huiswerk\Apps Programmeren\Week 4\Week4\Week4\obj\Debug\netstandard2.0\Views\AddPage.xaml.g.cs
+E:\Coding\Huiswerk\Apps Programmeren\Week 4\Week4\Week4\obj\Debug\netstandard2.0\Views\FavoritePage.xaml.g.cs
+E:\Coding\Huiswerk\Apps Programmeren\Week 4\Week4\Week4\obj\Debug\netstandard2.0\Views\LoginPage.xaml.g.cs
+E:\Coding\Huiswerk\Apps Programmeren\Week 4\Week4\Week4\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
+E:\Coding\Huiswerk\Apps Programmeren\Week 4\Week4\Week4\obj\Debug\netstandard2.0\Views\MasterPage.xaml.g.cs
+E:\Coding\Huiswerk\Apps Programmeren\Week 4\Week4\Week4\obj\Debug\netstandard2.0\Views\RegisterPage.xaml.g.cs
+E:\Coding\Huiswerk\Apps Programmeren\Week 4\Week4\Week4\obj\Debug\netstandard2.0\Week4.csproj.CoreCompileInputs.cache
+E:\Coding\Huiswerk\Apps Programmeren\Week 4\Week4\Week4\obj\Debug\netstandard2.0\Week4.AssemblyInfoInputs.cache
+E:\Coding\Huiswerk\Apps Programmeren\Week 4\Week4\Week4\obj\Debug\netstandard2.0\Week4.AssemblyInfo.cs
+E:\Coding\Huiswerk\Apps Programmeren\Week 4\Week4\Week4\obj\Debug\netstandard2.0\XamlC.stamp
+E:\Coding\Huiswerk\Apps Programmeren\Week 4\Week4\Week4\obj\Debug\netstandard2.0\Week4.dll
+E:\Coding\Huiswerk\Apps Programmeren\Week 4\Week4\Week4\obj\Debug\netstandard2.0\ref\Week4.dll
+E:\Coding\Huiswerk\Apps Programmeren\Week 4\Week4\Week4\obj\Debug\netstandard2.0\Week4.pdb
+E:\Coding\Huiswerk\Apps Programmeren\Week 4\Week4\Week4\obj\Debug\netstandard2.0\Week4.csprojAssemblyReference.cache

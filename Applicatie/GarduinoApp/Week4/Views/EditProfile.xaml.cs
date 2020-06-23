@@ -36,6 +36,7 @@ namespace GarduinoApp.Views
             profileID = currentProfile.ID;
 
             Name.Text = currentProfile.Name;
+            DevLocation.Text = currentProfile.Location;
             Threshold.Text = (currentProfile.Threshold).ToString();
             IP.Text = (currentProfile.IP).ToString();
             Port.Text = (currentProfile.Port).ToString();
@@ -44,14 +45,14 @@ namespace GarduinoApp.Views
 
         private void ChangeProfile(object sender, System.EventArgs e)
         {
-            if (string.IsNullOrEmpty(Name.Text) | string.IsNullOrEmpty(Threshold.Text) | string.IsNullOrEmpty(IP.Text) | string.IsNullOrEmpty(Port.Text) | string.IsNullOrEmpty(ArduinoPinNumber.Text))
+            if (string.IsNullOrEmpty(Name.Text) | string.IsNullOrEmpty(DevLocation.Text) | string.IsNullOrEmpty(Threshold.Text) | string.IsNullOrEmpty(IP.Text) | string.IsNullOrEmpty(Port.Text) | string.IsNullOrEmpty(ArduinoPinNumber.Text))
             {
                 Error.Text = "Please enter all the information";
                 return;
             }
             else
             {
-                databasemanager.EditProfile(profileID, Name.Text, Convert.ToInt32(Threshold.Text), IP.Text, Port.Text, Convert.ToInt32(ArduinoPinNumber.Text));
+                databasemanager.EditProfile(profileID, Name.Text, DevLocation.Text, Convert.ToInt32(Threshold.Text), IP.Text, Port.Text, Convert.ToInt32(ArduinoPinNumber.Text));
                 Navigation.PushAsync(new ProfilePage());
             }
         }

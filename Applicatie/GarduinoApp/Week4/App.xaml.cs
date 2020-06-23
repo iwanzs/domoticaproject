@@ -12,7 +12,7 @@ namespace Week4
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new HistoryPage());
+            MainPage = new NavigationPage(new LoginPage());
         }
 
         protected override void OnStart()

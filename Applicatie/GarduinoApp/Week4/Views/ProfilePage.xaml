@@ -19,40 +19,42 @@
                 <Label Text="Profiles" FontFamily="CandyBeans.otf#Candy" FontAttributes="Bold" FontSize="25" TextColor="White" HorizontalOptions="Start" VerticalOptions="Center" Grid.Row="0" Grid.Column="0"/>
                 <Button Text="+ Add" x:Name="AddButton" FontFamily="CandyBeans.otf#Candy" FontSize="25" FontAttributes="Bold" TextColor="White" HorizontalOptions="End" VerticalOptions="Center" Grid.Row="0" BackgroundColor="Transparent" Grid.Column="1" Clicked="AddProfile" />
             </Grid>
-            <ListView x:Name="ProfilesList" HasUnevenRows="True" ItemTapped="SelectProfile">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <SwipeView BackgroundColor="Transparent">
-                                <SwipeView.RightItems>
-                                    <SwipeItems>
-                                        <SwipeItem Text="Delete" BackgroundColor="LightPink" CommandParameter="{Binding}" Invoked="OnDeleteSwipeItemInvoked" />
-                                        <SwipeItem Text="Edit" BackgroundColor="LightGreen" CommandParameter="{Binding}" Invoked="OnEditSwipeItemInvoked" />
-                                    </SwipeItems>
-                                </SwipeView.RightItems>
-                                <Grid Padding="10">
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto" />
-                                    <RowDefinition Height="*" />
-                                </Grid.RowDefinitions>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto" />
-                                    <ColumnDefinition Width="*" />
-                                </Grid.ColumnDefinitions>
-                                <Image Grid.RowSpan="1" 
+            <ScrollView>
+                <ListView x:Name="ProfilesList" HasUnevenRows="True" ItemTapped="SelectProfile">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <SwipeView BackgroundColor="Transparent">
+                                    <SwipeView.RightItems>
+                                        <SwipeItems>
+                                            <SwipeItem Text="Delete" BackgroundColor="LightPink" CommandParameter="{Binding}" Invoked="OnDeleteSwipeItemInvoked" />
+                                            <SwipeItem Text="Edit" BackgroundColor="LightGreen" CommandParameter="{Binding}" Invoked="OnEditSwipeItemInvoked" />
+                                        </SwipeItems>
+                                    </SwipeView.RightItems>
+                                    <Grid Padding="10">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="*" />
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Image Grid.RowSpan="1" 
                                    BackgroundColor="LightPink"
                                    Aspect="AspectFill"
                                    HeightRequest="60"
                                    WidthRequest="60" />
-                                    <Label x:Name="FirstChar" TextColor="Black" FontFamily="CandyBeans.otf#Candy" Text="{Binding FirstLetter}" FontSize="20" Grid.RowSpan="1" HorizontalOptions="Center" VerticalOptions="Center"></Label>
-                                    <Label Grid.Column="1" TextColor="White" FontFamily="CandyBeans.otf#Candy" Text="{Binding Name}" FontAttributes="Bold" />
-                                    <Label FontFamily="CandyBeans.otf#Candy" TextColor="White" Grid.Column="1" Text="{Binding IP}" VerticalOptions="End" />
-                            </Grid>
-                            </SwipeView>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+                                        <Label x:Name="FirstChar" TextColor="Black" FontFamily="CandyBeans.otf#Candy" Text="{Binding FirstLetter}" FontSize="20" Grid.RowSpan="1" HorizontalOptions="Center" VerticalOptions="Center"></Label>
+                                        <Label Grid.Column="1" TextColor="White" FontFamily="CandyBeans.otf#Candy" Text="{Binding Name}" FontAttributes="Bold" />
+                                        <Label FontFamily="CandyBeans.otf#Candy" TextColor="White" Grid.Column="1" Text="{Binding IP}" VerticalOptions="End" />
+                                    </Grid>
+                                </SwipeView>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </ScrollView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

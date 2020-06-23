@@ -1,10 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "mf0BDGWll2dKBFBOR+XJNoBxzPBJReDm0/OWnR62uJo8KtFIFAwXMWpo9M6D/aO5/Ws+PtvpDUKjuHrIsjtB+g==",
+  "dgSpecHash": "vz9DUIRXcg3Cbfdm5+/7KyoUGnzM6ZWpGPnUF6ksyyrqVjjyABieeQ/5ZG5mGclUXmcz0CT71SNtgiIB3kVDtw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\tomre\\Desktop\\GitHubDomotica\\domoticaproject\\Applicatie\\GarduinoApp\\Week4.Android\\GarduinoApp.Android.csproj",
+  "projectFilePath": "C:\\Users\\tomre\\Desktop\\GarduinoNoGit\\domoticaproject2\\domoticaproject\\Applicatie\\GarduinoApp\\Week4.Android\\GarduinoApp.Android.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\tomre\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\tomre\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
     "C:\\Users\\tomre\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\tomre\\.nuget\\packages\\oxyplot.core\\1.0.0\\oxyplot.core.1.0.0.nupkg.sha512",
+    "C:\\Users\\tomre\\.nuget\\packages\\oxyplot.xamarin.android\\1.0.0\\oxyplot.xamarin.android.1.0.0.nupkg.sha512",
+    "C:\\Users\\tomre\\.nuget\\packages\\oxyplot.xamarin.forms\\1.0.0\\oxyplot.xamarin.forms.1.0.0.nupkg.sha512",
     "C:\\Users\\tomre\\.nuget\\packages\\sqlite-net-pcl\\1.7.335\\sqlite-net-pcl.1.7.335.nupkg.sha512",
     "C:\\Users\\tomre\\.nuget\\packages\\sqlitepclraw.bundle_green\\2.0.3\\sqlitepclraw.bundle_green.2.0.3.nupkg.sha512",
     "C:\\Users\\tomre\\.nuget\\packages\\sqlitepclraw.core\\2.0.3\\sqlitepclraw.core.2.0.3.nupkg.sha512",

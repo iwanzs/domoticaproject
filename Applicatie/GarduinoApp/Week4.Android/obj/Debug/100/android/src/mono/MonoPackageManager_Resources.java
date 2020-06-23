@@ -1,11 +1,15 @@
 package mono;
 public class MonoPackageManager_Resources {
 	public static String[] Assemblies = new String[]{
-		/* We need to ensure that "Week4.Android.dll" comes first in this list. */
-		"Week4.Android.dll",
+		/* We need to ensure that "GarduinoApp.Android.dll" comes first in this list. */
+		"GarduinoApp.Android.dll",
 		"FormsViewGroup.dll",
 		"GarduinoApp.dll",
 		"Newtonsoft.Json.dll",
+		"OxyPlot.dll",
+		"OxyPlot.Xamarin.Android.dll",
+		"OxyPlot.Xamarin.Forms.dll",
+		"OxyPlot.Xamarin.Forms.Platform.Android.dll",
 		"SQLite-net.dll",
 		"SQLitePCLRaw.batteries_v2.dll",
 		"SQLitePCLRaw.core.dll",

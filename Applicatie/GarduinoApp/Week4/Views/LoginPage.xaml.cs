@@ -1,7 +1,9 @@
-﻿using GarduinoApp.Views;
+﻿using GarduinoApp.Models;
+using GarduinoApp.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -46,6 +48,19 @@ namespace Week4.Views
             {
                 Configuration.Username = Username.Text;
                 Configuration.UserID = databasemanager.GetUser().UserID;
+
+
+                List<Profiles> profiles = databasemanager.GetProfiles();
+
+                foreach (var profile in profiles)
+                {
+                    //connect socket fro profile
+                    Socket socket = profile.ConnectSocket(profile.IP, profile.Port);
+
+                    Configuration.AddConnection(profile.ID, socket);
+                }
+
+
                 Navigation.PushAsync(new ProfilePage());
             }
         }

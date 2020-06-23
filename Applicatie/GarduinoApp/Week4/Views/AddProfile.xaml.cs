@@ -31,14 +31,14 @@ namespace GarduinoApp.Views
 
         private void CreateProfile(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(Name.Text) | string.IsNullOrEmpty(Threshold.Text) | string.IsNullOrEmpty(IP.Text) | string.IsNullOrEmpty(Port.Text) | string.IsNullOrEmpty(ArduinoPinNumber.Text))
+            if (string.IsNullOrEmpty(Name.Text) | string.IsNullOrEmpty(DevLocation.Text) | string.IsNullOrEmpty(Threshold.Text) | string.IsNullOrEmpty(IP.Text) | string.IsNullOrEmpty(Port.Text) | string.IsNullOrEmpty(ArduinoPinNumber.Text))
             {
                 Error.Text = "Please enter all the information";
                 return;
             }
             else
             {
-                databasemanager.AddProfile(Name.Text, Convert.ToInt32(Threshold.Text), IP.Text, Port.Text, Convert.ToInt32(ArduinoPinNumber.Text));
+                databasemanager.AddProfile(Name.Text, DevLocation.Text, Convert.ToInt32(Threshold.Text), IP.Text, Port.Text, Convert.ToInt32(ArduinoPinNumber.Text));
                 Navigation.PushAsync(new ProfilePage());
             }
         }

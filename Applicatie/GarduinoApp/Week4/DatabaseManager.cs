@@ -8,7 +8,7 @@ using GarduinoApp.Models;
 using SQLite;
 using Week4.Models;
 using Xamarin.Forms;
-using Xamarin.Forms.Internals;
+
 
 namespace Week4
 {
@@ -61,15 +61,15 @@ namespace Week4
             }
         }
 
-        public void AddProfile(string Name, int Threshold, string IP, string Port, int ArduinoPinNumber)
+        public void AddProfile(string Name, string Location, int Threshold, string IP, string Port, int ArduinoPinNumber)
         {
-            Profiles profile = new Profiles() { UserID = Configuration.UserID, Name = Name, Threshold = Threshold, IP = IP, Port = Port, ArduinoPinNumber = ArduinoPinNumber };
+            Profiles profile = new Profiles() { UserID = Configuration.UserID, Name = Name, Location = Location, Threshold = Threshold, IP = IP, Port = Port, ArduinoPinNumber = ArduinoPinNumber };
             dbConnection.Insert(profile);
         }
 
-        public void EditProfile(int ID, string Name, int Threshold, string IP, string Port, int ArduinoPinNumber)
+        public void EditProfile(int ID, string Name, string Location, int Threshold, string IP, string Port, int ArduinoPinNumber)
         {
-            dbConnection.Execute("UPDATE [Profiles] SET Name = ?, Threshold = ?, IP = ?, Port = ?, ArduinoPinNumber = ? WHERE ID = ? AND UserID = ? ", Name, Threshold, IP, Port, ArduinoPinNumber, ID, Configuration.UserID);
+            dbConnection.Execute("UPDATE [Profiles] SET Name = ?, Location = ?, Threshold = ?, IP = ?, Port = ?, ArduinoPinNumber = ? WHERE ID = ? AND UserID = ? ", Name, Location, Threshold, IP, Port, ArduinoPinNumber, ID, Configuration.UserID);
         }
 
         public void DeleteProfile(int ID, int UserID)
@@ -82,19 +82,20 @@ namespace Week4
             return dbConnection.Query<Profiles>("SELECT * FROM [Profiles] WHERE UserID='" + Configuration.UserID + "'");
         }
 
-<<<<<<< HEAD
         public Profiles GetProfileInformation(int ID)
         {
             Profiles profile = dbConnection.FindWithQuery<Profiles>("SELECT * FROM [Profiles] WHERE ID = ? ", ID);
             return profile;
-=======
-        public List<Results> GetGraphData()
+        }
+
+        public void SetThreshold(int sldrTempValue, int ID)
         {
-            //id of the profile - only get data for that profile
-            //current date so it gets all values until today/now
-            //the backlog to what you want to get values
-            return dbConnection.Query<Results>("SELECT * FROM [Results] WHERE ProfileID = ? AND Date <= ? AND Date >= ?");
->>>>>>> nando
+            dbConnection.Execute("UPDATE [Profiles] SET Threshold = ? WHERE ID = ? ", sldrTempValue, ID);
+        }
+
+        public void SetAutoEnabled(int Enable, int ID)
+        {
+            dbConnection.Execute("UPDATE [Profiles] SET AutoEnabled = ? WHERE ID = ? ", Enable, ID);
         }
     }
 }

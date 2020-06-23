@@ -40,7 +40,7 @@ namespace Week4.Views
             MasterList.Add(new MasterPageItem { Title = "Logout", Icon = "LogoutIcon.png", TargetType = typeof(LoginPage) });
             NavigationDrawerList.ItemsSource = MasterList;
             NavigationPage.SetHasNavigationBar(this, false);
-            Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(CurrentWeatherPage)));
+            Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(MainPage)));
         }
 
         private void OnMenuItemSelected(object sender, SelectedItemChangedEventArgs e)
@@ -60,11 +60,6 @@ namespace Week4.Views
 
             Detail = new NavigationPage((Page)Activator.CreateInstance(page));
             IsPresented = false;
-        }
-
-        protected override void OnAppearing()
-        {
-            NavigationDrawerList.SelectedItem = null;
         }
     }
 }
