@@ -8,7 +8,7 @@ using GarduinoApp.Models;
 using SQLite;
 using Week4.Models;
 using Xamarin.Forms;
-
+using Xamarin.Forms.Internals;
 
 namespace Week4
 {
@@ -82,10 +82,19 @@ namespace Week4
             return dbConnection.Query<Profiles>("SELECT * FROM [Profiles] WHERE UserID='" + Configuration.UserID + "'");
         }
 
+<<<<<<< HEAD
         public Profiles GetProfileInformation(int ID)
         {
             Profiles profile = dbConnection.FindWithQuery<Profiles>("SELECT * FROM [Profiles] WHERE ID = ? ", ID);
             return profile;
+=======
+        public List<Results> GetGraphData()
+        {
+            //id of the profile - only get data for that profile
+            //current date so it gets all values until today/now
+            //the backlog to what you want to get values
+            return dbConnection.Query<Results>("SELECT * FROM [Results] WHERE ProfileID = ? AND Date <= ? AND Date >= ?");
+>>>>>>> nando
         }
     }
 }

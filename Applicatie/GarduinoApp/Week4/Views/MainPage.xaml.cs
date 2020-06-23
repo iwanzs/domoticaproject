@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using GarduinoApp.Views;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using Week4.Models;
@@ -28,6 +29,11 @@ namespace Week4.Views
         private void UpdateClicked(object sender, System.EventArgs e)
         {
             UpdateLists();
+        }
+
+        private void HistoryClicked(object sender, System.EventArgs e)
+        {
+            Navigation.PushAsync(new HistoryPage());
         }
     }
 }
