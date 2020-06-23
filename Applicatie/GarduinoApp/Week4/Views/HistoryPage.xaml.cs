@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Week4;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -16,6 +16,8 @@ namespace GarduinoApp.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class HistoryPage : ContentPage, INotifyPropertyChanged
     {
+        DatabaseManager dbmanager;
+
         //max amount of points in a graph
         private int MAXPOINTS = 20;
 
@@ -39,6 +41,8 @@ namespace GarduinoApp.Views
         public HistoryPage()
         {
             InitializeComponent();
+
+            dbmanager = new DatabaseManager();
 
             //hardcoded way of saying what sensor it is
             //typeOfSensor = 1;
@@ -176,6 +180,7 @@ namespace GarduinoApp.Views
             var first = month.AddMonths(-1);
 
             //query for data and put it in variable
+            
 
             ////foreach through it all and putting it in datapoints and adding them to the lineseries
             //foreach (var item in collection)
