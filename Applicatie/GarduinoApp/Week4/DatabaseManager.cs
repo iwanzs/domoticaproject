@@ -97,5 +97,25 @@ namespace Week4
         {
             dbConnection.Execute("UPDATE [Profiles] SET AutoEnabled = ? WHERE ID = ? ", Enable, ID);
         }
+
+        public Results GetLatestResult(int id)
+        {
+            List<Results> results = dbConnection.Query<Results>("SELECT Value, Date FROM [Results] WHERE ProfileID = ?", id);
+
+            if (results.Count != 0)
+            {
+                Results result = results[results.Count -1];
+                return result;
+            }
+
+            //return een lege
+            return new Results();
+        }
+
+        public List<Results> GetPeriodOfResults(int id, DateTime period, DateTime now)
+        {
+            List<Results> result = dbConnection.Query<Results>("SELECT Value, Date FROM [Results] WHERE ProfileID = ? AND Date >= ? AND Date <= ?", id, period.ToString(), now.ToString());
+            return result;
+        }
     }
 }

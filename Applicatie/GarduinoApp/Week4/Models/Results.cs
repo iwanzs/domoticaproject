@@ -14,6 +14,6 @@ namespace GarduinoApp.Models
         [NotNull]
         public string Value { get; set; }
         [NotNull]
-        public int Date { get; set; }
+        public string Date { get; set; }
     }
 }
