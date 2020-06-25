@@ -19,12 +19,15 @@ namespace GarduinoApp.Views
     public partial class MainPage : ContentPage
     {
         static DatabaseManager databasemanager = new DatabaseManager();
-        Profiles currentProfile = databasemanager.GetProfileInformation(Configuration.ProfileID);
+        Profiles currentProfile;
         private Connection connection;
 
         public MainPage()
         {
             InitializeComponent();
+
+            currentProfile = databasemanager.GetProfileInformation(Configuration.ProfileID);
+
             connection = Configuration.GetConnection(currentProfile.ID);
             currentProfile.SetSocket(connection);
 
@@ -53,6 +56,17 @@ namespace GarduinoApp.Views
 
             lblTempCurrent.Text = currentProfile.Threshold.ToString();
             sldrTemp.Value = currentProfile.Threshold;
+        }
+
+        public static async Task<MainPage> Create()
+        {
+            await myMethod();
+            return new MainPage();
+        }
+
+        public async void WerkenKreng()
+        {
+
         }
 
         private void SwhAuto_OnToggled(object sender, ToggledEventArgs e)

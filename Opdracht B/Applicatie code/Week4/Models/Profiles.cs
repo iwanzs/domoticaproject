@@ -34,6 +34,9 @@ namespace GarduinoApp.Models
 
         private Socket socket;
 
+        //create dbManager for inserting weather data
+        DatabaseManager databasemanager = new DatabaseManager();
+
         public void SetSocket(Connection connection)
         {
             try
@@ -200,8 +203,6 @@ namespace GarduinoApp.Models
             {
                 try
                 {
-                    //create dbManager for inserting weather data
-                    DatabaseManager databasemanager = new DatabaseManager();
 
                     sock.Send(ArduinoPinNumber == 999
                         ? Encoding.ASCII.GetBytes("w")
@@ -231,7 +232,7 @@ namespace GarduinoApp.Models
                     Console.WriteLine("De exception bij task 1 is: " + exception);
                 }
             });
-            ttry.Wait(100);
+            ttry.Wait(300);
 
             Task tstry = Task.Run(() =>
             {

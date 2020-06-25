@@ -163,11 +163,11 @@ int getWeather() {
 
  while (client.connected()) { 
    String line = client.readStringUntil('\n'); 
-   Serial.println(line); 
+   //Serial.println(line); 
    
    //create a json buffer where to store the json data 
   StaticJsonDocument<475> doc;
-  Serial.println(doc.capacity());
+  //Serial.println(doc.capacity());
  
    deserializeJson(doc, line); 
 
@@ -203,7 +203,7 @@ void executeCommand(char cmd)
          
          
          // Command protocol
-         Serial.print("["); Serial.print(cmd); Serial.print("] -> ");
+         //Serial.print("["); Serial.print(cmd); Serial.print("] -> ");
          switch (cmd) {
          case 'a': // Report sensor value to the app  
             temp = DHT.temperature;
@@ -211,15 +211,15 @@ void executeCommand(char cmd)
             sensorValue = temp * 1.8 + 32;       
             intToCharBuf(sensorValue, buf, 4);                // convert to charbuffer
             server.write(buf, 4);                             // response is always 4 chars (\n included)
-            Serial.print("Sensor: "); Serial.println(buf);
+            //Serial.print("Sensor: "); Serial.println(buf);
             break;
          case 's': // Report switch state to the app
-            if (pinState) { server.write(" ON\n"); Serial.println("Pin state is ON"); }  // always send 4 chars
-            else { server.write("OFF\n"); Serial.println("Pin state is OFF"); }
+            if (pinState) { server.write(" ON\n"); } //Serial.println("Pin state is ON"); }  // always send 4 chars
+            else { server.write("OFF\n"); } //Serial.println("Pin state is OFF"); }
             break;
          case 't': // Toggle state; If state is already ON then turn it OFF
-            if (pinState) { pinState = false; Serial.println("Set pin state to \"OFF\""); }
-            else { pinState = true; Serial.println("Set pin state to \"ON\""); }  
+            if (pinState) { pinState = false; } //Serial.println("Set pin state to \"OFF\""); }
+            else { pinState = true; } //Serial.println("Set pin state to \"ON\""); }  
             pinChange = true; 
             break;
          case 'i':    
@@ -227,10 +227,11 @@ void executeCommand(char cmd)
             break;
          case 'w':
             currentValue = getWeather();
-            Serial.println(currentValue);    
+            //Serial.println(currentValue);    
             intToCharBuf(currentValue, buf, 4);                // convert to charbuffer
             server.write(buf, 4);                             // response is always 4 chars (\n included)
-            Serial.print("Het weer: "); Serial.println(buf);
+            //Serial.print("Het weer: ");
+            Serial.println(buf);
             currentValue = "";
             break;
          default:
