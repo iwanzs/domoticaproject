@@ -9,6 +9,7 @@ using Week4.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using SQLite;
+using System.Net.Sockets;
 
 namespace GarduinoApp.Views
 {
