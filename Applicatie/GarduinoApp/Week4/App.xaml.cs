@@ -1,4 +1,5 @@
-﻿using GarduinoApp.Views;
+﻿using GarduinoApp.Models;
+using GarduinoApp.Views;
 using System;
 using Week4.Views;
 using Xamarin.Forms;
@@ -11,6 +12,11 @@ namespace Week4
         public App()
         {
             InitializeComponent();
+
+            System.Timers.Timer timer = new System.Timers.Timer();
+            timer.Interval = 600000;
+            timer.Elapsed += new BackgroundTimer().timer_Elapsed;
+            timer.Start();
 
             MainPage = new NavigationPage(new LoginPage());
         }

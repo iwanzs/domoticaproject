@@ -180,5 +180,89 @@ namespace GarduinoApp.Models
             }
             else return false;
         }
+
+        public void CheckWeather(Socket sock)
+        {
+            Console.WriteLine("CheckWeather()");
+            if (AutoEnabled != 1) return;
+
+            string weather = "";
+            string deviceState = "";
+            int state = 0;
+            byte[] buffer = new byte[4]; // response is always 4 bytes
+            int bytesRead = 0;
+            string result = "---";
+
+
+            // w of a
+            sock.Send(Port == "999"
+                ? Encoding.ASCII.GetBytes("w" + " " + Location)
+                : Encoding.ASCII.GetBytes("a" + " " + Location)
+                );
+            //            sock.Send(Encoding.ASCII.GetBytes(string.IsNullOrEmpty(Port) ? "w" : "a"));
+
+            try
+            {
+                Console.WriteLine("sock.Receive");
+                bytesRead = sock.Receive(buffer);
+                while (sock.Available > 0) bytesRead = sock.Receive(buffer);
+                if (bytesRead == 4)
+                    weather = Encoding.ASCII.GetString(buffer, 0, bytesRead - 1);
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(exception);
+            }
+
+            // w of a
+            sock.Send(Encoding.ASCII.GetBytes("s"));
+
+            try
+            {
+                bytesRead = sock.Receive(buffer);
+                while (sock.Available > 0) bytesRead = sock.Receive(buffer);
+                if (bytesRead == 4)
+                    deviceState = Encoding.ASCII.GetString(buffer, 0, bytesRead - 1);
+                if (deviceState == " ON")
+                    state = 1;
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(exception);
+            }
+
+            Console.WriteLine("int.Parse");
+            //If the weather is higher than the Threshold and the device is off ToggleProfile()
+            if (int.Parse(weather) > Threshold)
+            {
+                Console.WriteLine("weather) >>>> Threshold");
+                if (state == 1) return;
+
+                try
+                {
+                    //Send command to server
+                    sock.Send(Encoding.ASCII.GetBytes("t"));
+                }
+                catch
+                {
+                }
+            }
+            //else check if device in on and if so ToggleProfile()
+            else if (int.Parse(weather) < Threshold)
+            {
+                Console.WriteLine("weather) <<<< Threshold");
+                if (state == 0) return;
+
+                try
+                {
+                    //Send command to server
+                    sock.Send(Encoding.ASCII.GetBytes("t"));
+                }
+                catch
+                {
+                }
+            }
+        }
+
     }
 }

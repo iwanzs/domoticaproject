@@ -73,7 +73,7 @@
                        FontFamily="CandyBeans.otf#Candy"
                        Style="{StaticResource labelResultStyle}" />
 
-                    <Label Text="Pressure (hPa)" 
+                    <Label Text="Pressure (hPa)"
                        FontFamily="CandyBeans.otf#Candy"
                        Style="{StaticResource labelStyle}" />
                     <Label Text="{Binding Main.Pressure}" 
@@ -83,7 +83,7 @@
                     <Label Text="Visibility" 
                        FontFamily="CandyBeans.otf#Candy"
                        Style="{StaticResource labelStyle}" />
-                    <Label Text="{Binding Weather[0].Visibility}" 
+                    <Label Text="{Binding Weather[0].Visibility}"
                        FontFamily="CandyBeans.otf#Candy"
                        Style="{StaticResource labelResultStyle}" />
                 </StackLayout>
