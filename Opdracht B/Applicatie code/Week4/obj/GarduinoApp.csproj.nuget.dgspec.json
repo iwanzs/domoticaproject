@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Iwan\\Desktop\\Domotica project groep 14\\Opdracht B\\Applicatie code\\Week4\\GarduinoApp.csproj": {}
+    "C:\\Users\\tomre\\Desktop\\GitHubDomotica\\domoticaproject\\Opdracht B\\Applicatie code\\Week4\\GarduinoApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Iwan\\Desktop\\Domotica project groep 14\\Opdracht B\\Applicatie code\\Week4\\GarduinoApp.csproj": {
+    "C:\\Users\\tomre\\Desktop\\GitHubDomotica\\domoticaproject\\Opdracht B\\Applicatie code\\Week4\\GarduinoApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Iwan\\Desktop\\Domotica project groep 14\\Opdracht B\\Applicatie code\\Week4\\GarduinoApp.csproj",
+        "projectUniqueName": "C:\\Users\\tomre\\Desktop\\GitHubDomotica\\domoticaproject\\Opdracht B\\Applicatie code\\Week4\\GarduinoApp.csproj",
         "projectName": "GarduinoApp",
-        "projectPath": "C:\\Users\\Iwan\\Desktop\\Domotica project groep 14\\Opdracht B\\Applicatie code\\Week4\\GarduinoApp.csproj",
-        "packagesPath": "C:\\Users\\Iwan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Iwan\\Desktop\\Domotica project groep 14\\Opdracht B\\Applicatie code\\Week4\\obj\\",
+        "projectPath": "C:\\Users\\tomre\\Desktop\\GitHubDomotica\\domoticaproject\\Opdracht B\\Applicatie code\\Week4\\GarduinoApp.csproj",
+        "packagesPath": "C:\\Users\\tomre\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tomre\\Desktop\\GitHubDomotica\\domoticaproject\\Opdracht B\\Applicatie code\\Week4\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Iwan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tomre\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -79,7 +79,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
         }
       }
     }

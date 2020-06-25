@@ -5,21 +5,24 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:oxy="clr-namespace:OxyPlot.Xamarin.Forms;assembly=OxyPlot.Xamarin.Forms" xmlns:local="clr-namespace:GarduinoApp.Views"
              mc:Ignorable="d"
-             x:Class="GarduinoApp.Views.HistoryPage">
+             x:Class="GarduinoApp.Views.HistoryPage"
+             BackgroundImage="HistoryPage.jpg">
     <ContentPage.Content>
-        <StackLayout>
-            <oxy:PlotView x:Name="SensorGraph"
+        <ScrollView>
+            <StackLayout Margin="10,32,10,0" HorizontalOptions="Center">
+                <oxy:PlotView x:Name="SensorGraph"
                       VerticalOptions="Center" 
                       HorizontalOptions="Center" 
                       WidthRequest="350"
                       HeightRequest="300"
                       />
-            <oxy:PlotView x:Name="StatusGraph" 
+                <oxy:PlotView x:Name="StatusGraph"
                       VerticalOptions="Center" 
                       HorizontalOptions="Center" 
                       WidthRequest="350"
                       HeightRequest="300"
                       />
-        </StackLayout>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

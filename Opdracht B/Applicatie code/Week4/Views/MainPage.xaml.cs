@@ -34,13 +34,13 @@ namespace GarduinoApp.Views
             if (currentProfile.IsConnected())
             {
                 btnConnectionState.BackgroundColor = Color.Green;
-            }
 
-            if (currentProfile.GetResponse("s") == " ON")
-            {
-                swhOnOff.Toggled -= SwhOnOff_OnToggled;
-                swhOnOff.IsToggled = true;
-                swhOnOff.Toggled += SwhOnOff_OnToggled;
+                if (currentProfile.GetResponse("s") == " ON")
+                {
+                    swhOnOff.Toggled -= SwhOnOff_OnToggled;
+                    swhOnOff.IsToggled = true;
+                    swhOnOff.Toggled += SwhOnOff_OnToggled;
+                }
             }
 
 

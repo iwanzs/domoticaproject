@@ -33,15 +33,23 @@ namespace GarduinoApp.Views
         /// <param name="e"></param>
         async void GetWeather()
         {
-            if (!string.IsNullOrWhiteSpace(Location))
+            try
             {
-                WeatherData weatherData = await _restService.GetWeatherData(GenerateRequestUri(Configuration.OpenWeatherMapEndpoint));
-                weatherData.Main.Temperature = weatherData.Main.Temperature + " °F";
-                weatherData.Main.Humidity = weatherData.Main.Humidity + "%";
-                weatherData.Wind.Speed = weatherData.Wind.Speed + " m/s";
-                weatherData.Main.dateTime = DateTime.UtcNow;
-                weatherData.Main.Pressure = weatherData.Main.Pressure + " hpa";
-                BindingContext = weatherData;
+                if (!string.IsNullOrWhiteSpace(Location))
+                {
+                    WeatherData weatherData = await _restService.GetWeatherData(GenerateRequestUri(Configuration.OpenWeatherMapEndpoint));
+                    weatherData.Main.Temperature = weatherData.Main.Temperature + " °F";
+                    weatherData.Main.Humidity = weatherData.Main.Humidity + "%";
+                    weatherData.Wind.Speed = weatherData.Wind.Speed + " m/s";
+                    weatherData.Main.dateTime = DateTime.UtcNow;
+                    weatherData.Main.Pressure = weatherData.Main.Pressure + " hpa";
+                    BindingContext = weatherData;
+                }
+            }
+            catch (NullReferenceException e)
+            {
+                Location = "";
+                ErrorText.Text = "The given location does not exist";
             }
         }
         /// <summary>

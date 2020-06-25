@@ -54,6 +54,8 @@
                        FontFamily="CandyBeans.otf#Candy"
                    HorizontalOptions="Center"
                        Style="{StaticResource labelResultStyle}" />
+            <Label x:Name="ErrorText" FontFamily="CandyBeans.otf#Candy"
+                   HorizontalOptions="Center"></Label>
         </StackLayout>
         <StackLayout VerticalOptions="Center" Margin="32,0,32,0" Grid.Row="1">
             <ScrollView>

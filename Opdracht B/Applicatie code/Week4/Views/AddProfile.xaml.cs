@@ -32,23 +32,28 @@ namespace GarduinoApp.Views
 
         private void CreateProfile(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(Name.Text) | string.IsNullOrEmpty(DevLocation.Text) | string.IsNullOrEmpty(Threshold.Text) | string.IsNullOrEmpty(IP.Text) | string.IsNullOrEmpty(Port.Text) | string.IsNullOrEmpty(ArduinoPinNumber.Text))
+            if (string.IsNullOrEmpty(Name.Text) | string.IsNullOrEmpty(DevLocation.Text) | string.IsNullOrEmpty(Threshold.Text) | string.IsNullOrEmpty(IP.Text) | string.IsNullOrEmpty(Port.Text))
             {
                 Error.Text = "Please enter all the information";
                 return;
             }
+            if (string.IsNullOrEmpty(ArduinoPinNumber.Text))
+            {
+                databasemanager.AddProfile(Name.Text, DevLocation.Text, Convert.ToInt32(Threshold.Text), IP.Text, Port.Text, 999);
+            }
             else
             {
                 databasemanager.AddProfile(Name.Text, DevLocation.Text, Convert.ToInt32(Threshold.Text), IP.Text, Port.Text, Convert.ToInt32(ArduinoPinNumber.Text));
-
-                List<Profiles> totalProfiles = databasemanager.GetProfiles();
-                int lastProfileID = (totalProfiles.Count() - 1);
-                Profiles profile = databasemanager.GetProfileInformation(lastProfileID);
-                Socket socket = profile.ConnectSocket(profile.IP, profile.Port);
-                Configuration.AddConnection(profile.ID, socket);
-
-                Navigation.PushAsync(new ProfilePage());
             }
+
+            List<Profiles> totalProfiles = databasemanager.GetProfiles();
+            int lastProfileID = (totalProfiles.Count() - 1);
+            Profiles profileInfo = totalProfiles[lastProfileID];
+            Profiles profile = databasemanager.GetProfileInformation(profileInfo.ID);
+            Socket socket = profile.ConnectSocket(profile.IP, profile.Port);
+            Configuration.AddConnection(profile.ID, socket);
+
+            Navigation.PushAsync(new ProfilePage());
         }
 
         private void CancelProfile(object sender, EventArgs e)

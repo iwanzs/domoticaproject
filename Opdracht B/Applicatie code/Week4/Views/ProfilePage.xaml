@@ -55,6 +55,7 @@
                     </ListView.ItemTemplate>
                 </ListView>
             </ScrollView>
+            <Label Grid.Row="1" VerticalOptions="End" HorizontalOptions="Center" FontSize="Medium" Text="Drag to the left to edit or delete" FontFamily="CandyBeans.otf#Candy"></Label>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

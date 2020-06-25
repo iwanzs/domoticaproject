@@ -19,10 +19,9 @@ namespace GarduinoApp.Views
     {
         DatabaseManager dbManager;
         Profiles currentProfile;
-        Connection connection;
 
         //max amount of points in a graph
-        private int MAXPOINTS = 5376;
+        private int MAXPOINTS = 100;
 
         /// <summary>
         /// 0 = sensor status, dont use this one
@@ -46,9 +45,6 @@ namespace GarduinoApp.Views
             dbManager = new DatabaseManager();
             currentProfile = dbManager.GetProfileInformation(Configuration.ProfileID);
 
-            //hardcoded way of saying what sensor it is
-            //typeOfSensor = 1;
-
             //fetches all data from a certain period
             GetData();
 
@@ -57,20 +53,6 @@ namespace GarduinoApp.Views
 
             //sensor graph
             sensorGraph = CreateGraph(typeOfSensor);
-
-
-            //for testing
-            var rnd = new Random();
-
-            //to add a new point to both graphs
-            //AddPoint(DateTime.Now, rnd.Next(0, 40), true);
-
-            //time loop with test data
-            //var timer = new System.Threading.Timer((e) =>
-            //{
-            //    //to add a new point to both graphs
-            //    AddPoint(DateTime.Now, rnd.Next(0,40));
-            //}, null, STARTTIMESPAN, PERIODTIMESPAN);
 
             var timer = new System.Threading.Timer((e) =>
             {
@@ -88,16 +70,12 @@ namespace GarduinoApp.Views
         public PlotModel CreateGraph(int type = 0)
         {
             PlotModel graph;
-            //sensorSeries = new LineSeries();
 
             switch (type)
             {
                 case 0:
-                    //statusSeries = new LineSeries();
-                    
                     graph = new PlotModel { Title = "Device status" };
-                    //Graph.Axes.Add(new LinearAxis { Position = AxisPosition.Bottom, Title = "Time" });
-                    graph.Axes.Add(new DateTimeAxis { Position = AxisPosition.Bottom, StringFormat = "dd-MM", Title = "Time",  });
+                    graph.Axes.Add(new DateTimeAxis { Position = AxisPosition.Bottom, StringFormat = "HH dd-MM", Title = "Time", });
                     graph.Axes.Add(new LinearAxis { Position = AxisPosition.Left, Title = "1 = on 0 = off" });
 
                     graph.Series.Add(statusSeries);
@@ -109,9 +87,8 @@ namespace GarduinoApp.Views
 
                 case 1:
                     graph = new PlotModel { Title = "Temp of air" };
-                    //Graph.Axes.Add(new LinearAxis { Position = AxisPosition.Bottom, Title = "Time" }); HH dd-MM-yyyy
-                    graph.Axes.Add(new DateTimeAxis { Position = AxisPosition.Bottom, StringFormat = "dd-MM", Title = "Time" });
-                    graph.Axes.Add(new LinearAxis { Position = AxisPosition.Left, Title = "Temperature(℃)" });
+                    graph.Axes.Add(new DateTimeAxis { Position = AxisPosition.Bottom, StringFormat = "HH dd-MM", Title = "Time" });
+                    graph.Axes.Add(new LinearAxis { Position = AxisPosition.Left, Title = "Temperature(°F)" });
 
                     graph.Series.Add(sensorSeries);
 
@@ -195,29 +172,20 @@ namespace GarduinoApp.Views
         {
             statusSeries = new LineSeries();
             sensorSeries = new LineSeries();
-            
-            //create a variable to go a month back
-            var now = DateTime.Now;
-            var month = new DateTime(now.Year, now.Month, 1);
-            var period = month.AddMonths(-1);
 
             //query for data and put it in variable
-            List<Results> collection = dbManager.GetPeriodOfResults(currentProfile.ID, period, now);
+            List<Results> collection = dbManager.GetPeriodOfResults(currentProfile.ID);
 
             //foreach through it all and putting it in datapoints and adding them to the lineseries
             foreach (var item in collection)
             {
-                //UpdateLineSeries(DateTime.Parse(item.Date), float.Parse(item.Value), GetDeviceStatus(Int32.Parse(item.Value)));
                 //put the correct data in lineSeries so it is available to everything
                 int status = GetDeviceStatus(Int32.Parse(item.Value));
                 float value = float.Parse(item.Value);
-                //DateTime date = Convert.ToDateTime(item.Date);
-                DateTime date = DateTime.ParseExact(item.Date, "HH dd-MM-yyyy", null);
-                //double time = DateTimeAxis.ToDouble(date);
+                DateTime date = DateTime.Parse(item.Date);
 
                 statusSeries.Points.Add(new DataPoint(DateTimeAxis.ToDouble(date), status));
                 sensorSeries.Points.Add(new DataPoint(DateTimeAxis.ToDouble(date), value));
-                //UpdateLineSeries(date, value, status);
 
                 if (sensorSeries.Points.Count >= MAXPOINTS)
                 {

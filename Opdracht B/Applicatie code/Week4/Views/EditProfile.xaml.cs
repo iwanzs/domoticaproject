@@ -10,6 +10,7 @@ using SQLite;
 using System;
 using Xamarin.Forms.Internals;
 using GarduinoApp.Models;
+using System.Net.Sockets;
 
 namespace GarduinoApp.Views
 {
@@ -45,16 +46,26 @@ namespace GarduinoApp.Views
 
         private void ChangeProfile(object sender, System.EventArgs e)
         {
-            if (string.IsNullOrEmpty(Name.Text) | string.IsNullOrEmpty(DevLocation.Text) | string.IsNullOrEmpty(Threshold.Text) | string.IsNullOrEmpty(IP.Text) | string.IsNullOrEmpty(Port.Text) | string.IsNullOrEmpty(ArduinoPinNumber.Text))
+            if (string.IsNullOrEmpty(Name.Text) | string.IsNullOrEmpty(DevLocation.Text) | string.IsNullOrEmpty(Threshold.Text) | string.IsNullOrEmpty(IP.Text) | string.IsNullOrEmpty(Port.Text))
             {
                 Error.Text = "Please enter all the information";
                 return;
             }
+            if (string.IsNullOrEmpty(ArduinoPinNumber.Text))
+            {
+                databasemanager.EditProfile(profileID, Name.Text, DevLocation.Text, Convert.ToInt32(Threshold.Text), IP.Text, Port.Text, 999);
+            }
             else
             {
                 databasemanager.EditProfile(profileID, Name.Text, DevLocation.Text, Convert.ToInt32(Threshold.Text), IP.Text, Port.Text, Convert.ToInt32(ArduinoPinNumber.Text));
-                Navigation.PushAsync(new ProfilePage());
             }
+
+            Profiles profile = databasemanager.GetProfileInformation(profileID);
+            Configuration.RemoveConnection(profile.ID);
+            Socket socketAdd = profile.ConnectSocket(profile.IP, profile.Port);
+            Configuration.AddConnection(profile.ID, socketAdd);
+
+            Navigation.PushAsync(new ProfilePage());
         }
 
         private void CancelProfile(object sender, EventArgs e)

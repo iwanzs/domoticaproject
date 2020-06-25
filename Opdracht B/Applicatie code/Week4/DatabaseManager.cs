@@ -84,7 +84,7 @@ namespace Week4
 
         public Profiles GetProfileInformation(int ID)
         {
-            Profiles profile = dbConnection.FindWithQuery<Profiles>("SELECT * FROM [Profiles] WHERE ID = ? ", ID);
+            Profiles profile = dbConnection.FindWithQuery<Profiles>("SELECT * FROM [Profiles] WHERE ID = '" + ID + "'");
             return profile;
         }
 
@@ -112,10 +112,33 @@ namespace Week4
             return new Results();
         }
 
-        public List<Results> GetPeriodOfResults(int id, DateTime period, DateTime now)
+        public List<Results> GetPeriodOfResults(int id)
         {
-            List<Results> result = dbConnection.Query<Results>("SELECT Value, Date FROM [Results] WHERE ProfileID = ? AND Date >= ? AND Date <= ?", id, period.ToString(), now.ToString());
+            List<Results> query = dbConnection.Query<Results>("SELECT Value, Date FROM [Results] WHERE ProfileID = ? ORDER BY Date DESC", id);
+            List<Results> result = new List<Results>();
+
+            //reverse so the latest objects are on top
+            query.Reverse();
+
+            //amount of datapoints to put in the graph
+            int amount = 60;
+
+            if (query.Count < amount)
+            {
+                amount = query.Count;
+            }
+
+            for (int i = 0; i < amount; i++)
+            {
+                result.Add(query[i]);
+            }
+
             return result;
+        }
+
+        public void AddResult(int id, int value, string date)
+        {
+            dbConnection.Execute("INSERT INTO [Results] (ProfileID, Value, Date) VALUES (?,?,?)", id, value, date);
         }
     }
 }

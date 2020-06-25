@@ -5,6 +5,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using Week4;
 
 namespace GarduinoApp.Models
 {
@@ -18,6 +19,8 @@ namespace GarduinoApp.Models
         public string Name { get; set; }
         [NotNull]
         public string Location { get; set; }
+        [Ignore]
+        public string FirstLetter => Name[0].ToString().ToUpper();
         [NotNull]
         public int Threshold { get; set; }
         [NotNull]
@@ -89,7 +92,10 @@ namespace GarduinoApp.Models
 
         public bool IsConnected()
         {
-            return socket != null && (socket != null || socket.Connected);
+            if (socket != null)
+                return socket.Connected;
+
+            return false;
         }
 
         public bool ToggleProfile()
@@ -194,7 +200,10 @@ namespace GarduinoApp.Models
             {
                 try
                 {
-                    sock.Send(Port == "999"
+                    //create dbManager for inserting weather data
+                    DatabaseManager databasemanager = new DatabaseManager();
+
+                    sock.Send(ArduinoPinNumber == 999
                         ? Encoding.ASCII.GetBytes("w")
                         : Encoding.ASCII.GetBytes("a")
                     );
@@ -213,6 +222,9 @@ namespace GarduinoApp.Models
                         weather = weather.Substring(1, weather.Length - 1);
                     }
                     intWeather = Convert.ToInt32(weather);
+
+                    //insert data into database
+                    databasemanager.AddResult(UserID, intWeather, DateTime.Now.ToString());
                 }
                 catch (Exception exception)
                 {

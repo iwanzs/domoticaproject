@@ -28,6 +28,26 @@ namespace Week4
             return config;
         }
 
+        public static void RemoveConnection(int ID)
+        {
+            Connection config = ConnectionsList.Find(item => item.ConnectionID == ID);
+            if(config.ConnectionSocket != null)
+            {
+                config.ConnectionSocket.Close();
+            }
+            ConnectionsList.RemoveAll(item => item.ConnectionID == ID);
+        }
+
+        public static void RemoveAllConnections()
+        {
+            foreach (var con in ConnectionsList)
+            {
+                Connection config = ConnectionsList.Find(item => item.ConnectionID == con.ConnectionID);
+                config.ConnectionSocket.Close();
+            }
+            ConnectionsList.Clear();
+        }
+
         //Connection Endpoint for the API
         public static string OpenWeatherMapEndpoint = "https://api.openweathermap.org/data/2.5/weather";
         //API Key to connect with the API

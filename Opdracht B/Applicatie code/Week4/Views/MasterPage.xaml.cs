@@ -50,6 +50,7 @@ namespace Week4.Views
 
             if(page == typeof(LoginPage))
             {
+                Configuration.RemoveAllConnections();
                 Navigation.PushModalAsync(new NavigationPage(new LoginPage()));
             }
             else if(page == typeof(ProfilePage))
