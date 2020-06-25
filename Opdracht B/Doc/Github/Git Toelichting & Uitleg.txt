@@ -1,0 +1,10 @@
+Wij hebben als Groep 14 actief Github gebruikt.
+Bewijs hier voor is geleverd als afbeeldingen binnen de map van dit document.
+
+De hoeveelheid commits zeggen niks over de hoeveelheid werk die geleverd is, onderling hebben we ook her en der wel 
+eens iets doorgestuurd (omdat dat nou eenmaal makkelijk ging onderling) en heeft de ene 3 commits nodig voor 1 functionaliteit waar de ander daar 1 voor nodig heeft.
+
+Nando Reij is zelfs aangewezen als Git master, we hebben allemaal in afzonderlijke branches gewerkt (of per man of per functionaliteit, naar eigen voorkeur) 
+en die heeft hij samengevoegd naar develop en toen naar master gemerged.
+
+In ieder geval is Git Version Control actief toegepast en hopelijk afdoende bewezen.
