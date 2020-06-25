@@ -39,6 +39,13 @@ namespace GarduinoApp.Views
             else
             {
                 databasemanager.AddProfile(Name.Text, DevLocation.Text, Convert.ToInt32(Threshold.Text), IP.Text, Port.Text, Convert.ToInt32(ArduinoPinNumber.Text));
+
+                List<Profiles> totalProfiles = databasemanager.GetProfiles();
+                int lastProfileID = (totalProfiles.Count() - 1);
+                Profiles profile = databasemanager.GetProfileInformation(lastProfileID);
+                Socket socket = profile.ConnectSocket(profile.IP, profile.Port);
+                Configuration.AddConnection(profile.ID, socket);
+
                 Navigation.PushAsync(new ProfilePage());
             }
         }
