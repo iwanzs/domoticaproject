@@ -152,7 +152,6 @@ C:\Users\tomre\Desktop\GitHubDomotica\domoticaproject\Opdracht B\Applicatie code
 C:\Users\tomre\Desktop\GitHubDomotica\domoticaproject\Opdracht B\Applicatie code\Week4\bin\Debug\netstandard2.0\GarduinoApp.dll
 C:\Users\tomre\Desktop\GitHubDomotica\domoticaproject\Opdracht B\Applicatie code\Week4\bin\Debug\netstandard2.0\ref\GarduinoApp.dll
 C:\Users\tomre\Desktop\GitHubDomotica\domoticaproject\Opdracht B\Applicatie code\Week4\bin\Debug\netstandard2.0\GarduinoApp.pdb
-C:\Users\tomre\Desktop\GitHubDomotica\domoticaproject\Opdracht B\Applicatie code\Week4\obj\Debug\netstandard2.0\GarduinoApp.csprojAssemblyReference.cache
 C:\Users\tomre\Desktop\GitHubDomotica\domoticaproject\Opdracht B\Applicatie code\Week4\obj\Debug\netstandard2.0\App.xaml.g.cs
 C:\Users\tomre\Desktop\GitHubDomotica\domoticaproject\Opdracht B\Applicatie code\Week4\obj\Debug\netstandard2.0\Views\AddProfile.xaml.g.cs
 C:\Users\tomre\Desktop\GitHubDomotica\domoticaproject\Opdracht B\Applicatie code\Week4\obj\Debug\netstandard2.0\Views\CurrentWeatherPage.xaml.g.cs
